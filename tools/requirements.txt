@@ -1,0 +1,23 @@
+# Core Scientific Libraries
+numpy>=1.22
+scipy>=1.8
+matplotlib>=3.5
+pandas>=1.4
+
+# Image Processing
+opencv-python>=4.7
+scikit-image>=0.19
+Pillow>=9.1
+
+# Notebook & Visualization
+jupyterlab>=3.3
+seaborn>=0.11
+
+# Web App (for student mini-projects)
+flask>=2.1
+
+# Progress Bars, Utils
+tqdm>=4.64
+
+# Google Colab compatibility (optional)
+notebook

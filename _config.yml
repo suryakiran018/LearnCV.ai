@@ -1,0 +1,11 @@
+theme: jekyll-theme-midnight
+title: "LearnCV.ai"
+description: "Teaching AI visually and practically!"
+
+# Custom CSS override
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      css: "docs/assets/css/style.css"

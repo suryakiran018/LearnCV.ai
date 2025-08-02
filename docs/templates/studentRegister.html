@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration</title>
+    <link
+      href="../css/newstyle.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <div class="form-container">
+        <h4 class="text-center mb-4">Student Registration</h4>
+        <form id="submit-to-google-sheet">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              class="form-control"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">College Id:</label>
+            <input
+              class="form-control"
+              type="text"
+              name="rollno"
+              id="rollno"
+              placeholder="College Id or Roll Number"
+              required
+            />
+          </div>
+      
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              class="form-control"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="slip">Contact Number:</label>
+            <input
+              class="form-control"
+              type="text"
+              name="contact"
+              id="contact_number"
+              placeholder="Contact Number"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="loc">Gender:</label>
+            <select class="form-control" name="gender" id="gender" required>
+              <option value="" disabled selected hidden>Choose...</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="loc">Github:</label>
+            <textarea
+              class="form-control"
+              name="github"
+              id="github"
+              placeholder="Github Profile URL"
+              required
+            ></textarea>
+          </div>
+            
+          <div class="form-group">
+            <label for="loc">LinkedIn:</label>
+            <textarea
+              class="form-control"
+              name="linkedin"
+              id="linkedin"
+              placeholder="LinkedIn Profile URL"
+              required
+            ></textarea>
+          </div>
+            
+          <div class="form-group form-check">
+            <input class="form-check-input" type="checkbox" id="ex" name="ex" required />
+            <label class="form-check-label" for="ex"
+              >By checking this box I certify that I am agree with the data
+              terms and policies.
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Submit
+          </button>
+        </form>
+        <div id="loader" class="submit_loader">
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </div>
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzrzZUCae5W0xUyvkl1qWvVoOJ0RB_vZ1hlrojeFbZNjGve9IIu6MeivwWF0_bffs-R/exec";
+  const form = document.forms["submit-to-google-sheet"];
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) return;
+
+    // Get values
+    const email = document.getElementById("email").value.trim();
+    const github = document.getElementById("github").value.trim();
+
+    // 🔁 Duplicate Check
+    const checkURL = `${scriptURL}?email=${encodeURIComponent(email)}&github=${encodeURIComponent(github)}`;
+    document.getElementById("loader").style.display = "flex";
+
+    try {
+      const response = await fetch(checkURL);
+      const result = await response.json();
+      document.getElementById("loader").style.display = "none";
+
+      if (result.duplicate) {
+        swal("Already Registered", "You have already submitted this form.", "info");
+        return; // Stop submission
+      }
+
+      // ✅ Not Duplicate → Proceed with Preview
+      showPreviewAndSubmit();
+
+    } catch (error) {
+      swal("Error", "Something went wrong while checking existing data!", "error");
+    }
+  });
+
+  function showPreviewAndSubmit() {
+    const name = document.getElementById("name").value.trim();
+    const rollno = document.getElementById("rollno").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const contact = document.getElementById("contact_number").value.trim();
+    const gender = document.getElementById("gender").value;
+    const github = document.getElementById("github").value.trim();
+    const linkedin = document.getElementById("linkedin").value.trim();
+    const ex = document.getElementById("ex").checked ? "Yes" : "No";
+
+    const previewHTML = `
+      <strong>Name:</strong> ${name}<br/>
+      <strong>Roll No:</strong> ${rollno}<br/>
+      <strong>Email:</strong> ${email}<br/>
+      <strong>Contact:</strong> ${contact}<br/>
+      <strong>Gender:</strong> ${gender}<br/>
+      <strong>GitHub:</strong> ${github}<br/>
+      <strong>LinkedIn:</strong> ${linkedin}<br/>
+      <strong>Agreed to Terms:</strong> ${ex}
+    `;
+
+    // Show SweetAlert confirmation
+    swal({
+      title: "Confirm Your Details",
+      html: previewHTML,
+      type: "info",
+      showCancelButton: true,
+      confirmButtonText: "Confirm & Submit",
+      cancelButtonText: "Edit",
+    }).then((result) => {
+      if (result.value) {
+        // Send to Google Sheets
+        const formData = new FormData(form);
+        formData.append("ex", ex);
+        // Show loader
+        document.getElementById("loader").style.display = "flex";
+
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then(() => {
+            document.getElementById("loader").style.display = "none";
+            swal("Submitted!", "Your data has been saved successfully.", "success");
+            form.reset();
+          })
+          .catch(() => {
+            document.getElementById("loader").style.display = "none";
+            swal("Error", "Something went wrong. Please try again!", "error");
+          });
+      }
+    });
+  }
+  
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const rollno = document.getElementById("rollno").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const contact = document.getElementById("contact_number").value.trim();
+      const gender = document.getElementById("gender").value;
+      const github = document.getElementById("github").value.trim();
+      const linkedin = document.getElementById("linkedin").value.trim();
+      const checkbox = document.getElementById("ex").checked;
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^[0-9]{10}$/;
+      const urlRegex = /^(https?:\/\/)?([\w\d\-]+\.)+[\w]{2,}(\/[\w\-._~:/?#[\]@!$&'()*+,;=]*)?$/i;
+
+      if (!name || !rollno || !email || !contact || !gender || !github || !linkedin) {
+        swal("Warning", "Please fill out all the required fields.", "warning");
+        return false;
+      }
+
+      if (!emailRegex.test(email)) {
+        swal("Invalid Email", "Please enter a valid email address.", "warning");
+        return false;
+      }
+
+      if (!phoneRegex.test(contact)) {
+        swal("Invalid Contact", "Contact number must be 10 digits.", "warning");
+        return false;
+      }
+
+      if (!urlRegex.test(github)) {
+        swal("Invalid GitHub URL", "Please enter a valid GitHub profile URL.", "warning");
+        return false;
+      }
+
+      if (!urlRegex.test(linkedin)) {
+        swal("Invalid LinkedIn URL", "Please enter a valid LinkedIn profile URL.", "warning");
+        return false;
+      }
+
+      if (!checkbox) {
+        swal("Consent Required", "You must agree to the terms and policies.", "warning");
+        return false;
+      }
+
+      return true;
+    }
+</script>
+
+
+  </body>
+</html>

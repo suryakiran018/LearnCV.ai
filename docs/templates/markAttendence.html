@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Location-Based Attendance</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background-color: rgba(68, 57, 57, 0.58); }
+    button { padding: 10px 20px; font-size: 16px; }
+    #status { margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<h2>Mark Your Attendance</h2>
+<input type="text" id="name" placeholder="Enter your name"><br><br>
+<button onclick="markAttendance()">Mark Attendance</button>
+<div id="status"></div>
+
+<script>
+  // const ALLOWED_LAT = 17.340089789915506;
+  // const ALLOWED_LON = 78.56201933875003; // home coordinates
+  const ALLOWED_LAT = 17.329976772186807; 
+  const ALLOWED_LON = 78.29822795216126; // campus coordinates
+  const MAX_RADIUS = 100; // in meters
+
+  function toRadians(degrees) {
+    return degrees * (Math.PI / 180);
+  }
+
+  function getDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371e3; // Earth radius in meters
+    const dLat = toRadians(lat2 - lat1);
+    const dLon = toRadians(lon2 - lon1);
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+              Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) *
+              Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
+  }
+
+  function markAttendance() {
+    const name = document.getElementById("name").value;
+    if (!name) {
+      alert("Please enter your name!");
+      return;
+    }
+
+    document.getElementById("status").innerHTML = "📡 Getting your location...";
+
+    navigator.geolocation.getCurrentPosition(position => {
+      const userLat = position.coords.latitude;
+      const userLon = position.coords.longitude;
+      const distance = getDistance(userLat, userLon, ALLOWED_LAT, ALLOWED_LON);
+
+      if (distance <= MAX_RADIUS) {
+        // Send to Google Sheet
+        const data = {
+          name: name,
+          lat: userLat,
+          lon: userLon,
+          timestamp: new Date().toISOString()
+        };
+
+        console.log("Data to send:", data);
+        console.log("User is within allowed radius:", distance, "meters");
+        document.getElementById("status").innerHTML = "✅ Attendance Marked!";
+
+        // fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+        //   method: "POST",
+        //   headers: { "Content-Type": "application/json" },
+        //   body: JSON.stringify(data)
+        // })
+        // .then(res => res.text())
+        // .then(msg => {
+        //   document.getElementById("status").innerHTML = "✅ Attendance Marked!";
+        // })
+        // .catch(err => {
+        //   document.getElementById("status").innerHTML = "❌ Error sending data.";
+        // });
+
+      } else {
+        document.getElementById("status").innerHTML = "❌ You are not inside the campus!";
+        console.log("User is outside the allowed radius:", distance, "meters");
+      }
+
+    }, error => {
+      document.getElementById("status").innerHTML = "❌ Unable to get location.";
+    });
+  }
+</script>
+
+</body>
+</html>
