@@ -48,8 +48,14 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 
 - 📌 Follow the [**Course Instructions**](instructions.md) to begin your journey.
 - [Git & GitHub basics](tools/git&github.md) (hands-on, beginner-friendly)
+- [Mathematics for AI](lectures/Mathematics_for_AI.html) (Linear Algebra, Calculus)
+- [Python Basics](lectures/Python.html) (Cheatsheets, Tutorial)
 
 ---
+
+## 📆 Daily Progress – Lecture Log
+
+> Track your progress and revisit key concepts anytime.
 
 ## 👨‍🏫 Instructor
 

@@ -47,7 +47,15 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 > "Every pixel tells a story. Learn to see beyond the image — that's the essence of Computer Vision."
 
 - 📌 Follow the [**Course Instructions**](instructions.md) to begin your journey.
-- [Git & GitHub basics](tools/git&github.md) (hands-on, beginner-friendly)
+- [Roadmap to Computer Vision Engineer](tools/git&github.md) (hands-on, beginner-friendly)
+- [Mathematics for AI](lectures/Mathematics_for_AI.html) (Linear Algebra, Calculus)
+- [Python Basics](lectures/Python.html) (Cheatsheets, Tutorial)
+
+---
+
+## 📆 Daily Progress – Lecture Log
+
+> [Track Lecture progress and revisit key concepts anytime.](lectures/lectures.md)
 
 ---
 
