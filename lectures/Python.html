@@ -1,0 +1,2371 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Python</title>
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/lecture.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+
+
+  <!-- Load mathjax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
+
+  <!-- Load math config -->
+    <script src="../docs/js/math.js"></script>
+
+    <style>
+        h2{
+            text-align: center;
+        }
+    </style>
+
+
+
+</head>
+<body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+
+  <h1><a href="../index.md" class="anchor-link">
+    LearnCV.ai
+  </a>
+</h1>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python">Python<a class="anchor-link" href="#Python"></a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Python-Basics">Python Basics<a class="anchor-link" href="#Python-Basics"></a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="https://miro.medium.com/v2/resize:fit:5940/1*hPxQLAXm_B9Gm5kc2QOhdw.jpeg"/></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/1*bOHGLFNWnZfoN0QYMkLkyQ.jpeg"/></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Python-Keywords-(Python-3.10+)">Python Keywords (Python 3.10+)<a class="anchor-link" href="#Python-Keywords-(Python-3.10+)"></a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<table>
+<thead><tr>
+<th>Category</th>
+<th>Keywords</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Control Flow</strong></td>
+<td><code>if</code>, <code>else</code>, <code>elif</code>, <code>while</code>, <code>for</code>, <code>break</code>, <code>continue</code>, <code>pass</code></td>
+</tr>
+<tr>
+<td><strong>Boolean Logic</strong></td>
+<td><code>True</code>, <code>False</code>, <code>and</code>, <code>or</code>, <code>not</code>, <code>is</code>, <code>in</code></td>
+</tr>
+<tr>
+<td><strong>Functions</strong></td>
+<td><code>def</code>, <code>return</code>, <code>lambda</code>, <code>yield</code>, <code>global</code>, <code>nonlocal</code></td>
+</tr>
+<tr>
+<td><strong>Classes &amp; OOP</strong></td>
+<td><code>class</code>, <code>del</code>, <code>self</code>, <code>super</code></td>
+</tr>
+<tr>
+<td><strong>Exception Handling</strong></td>
+<td><code>try</code>, <code>except</code>, <code>finally</code>, <code>raise</code>, <code>assert</code></td>
+</tr>
+<tr>
+<td><strong>Variable Control</strong></td>
+<td><code>None</code>, <code>as</code>, <code>with</code>, <code>from</code>, <code>import</code></td>
+</tr>
+<tr>
+<td><strong>Miscellaneous</strong></td>
+<td><code>await</code>, <code>async</code>, <code>match</code>, <code>case</code> (Python 3.10+)</td>
+</tr>
+<tr>
+<td><strong>Declarations</strong></td>
+<td><code>True</code>, <code>False</code>, <code>None</code></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">keyword</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[&#39;False&#39;, &#39;None&#39;, &#39;True&#39;, &#39;and&#39;, &#39;as&#39;, &#39;assert&#39;, &#39;async&#39;, &#39;await&#39;, &#39;break&#39;, &#39;class&#39;, &#39;continue&#39;, &#39;def&#39;, &#39;del&#39;, &#39;elif&#39;, &#39;else&#39;, &#39;except&#39;, &#39;finally&#39;, &#39;for&#39;, &#39;from&#39;, &#39;global&#39;, &#39;if&#39;, &#39;import&#39;, &#39;in&#39;, &#39;is&#39;, &#39;lambda&#39;, &#39;nonlocal&#39;, &#39;not&#39;, &#39;or&#39;, &#39;pass&#39;, &#39;raise&#39;, &#39;return&#39;, &#39;try&#39;, &#39;while&#39;, &#39;with&#39;, &#39;yield&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Python-Functions-and-Tricks">Python Functions and Tricks<a class="anchor-link" href="#Python-Functions-and-Tricks"></a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="What-is-a-Function?">What is a Function?<a class="anchor-link" href="#What-is-a-Function?"></a></h4><p>A <strong>function</strong> is a <strong>block of reusable code</strong> that performs a specific task. Functions help in:</p>
+<ul>
+<li>Reducing repetition (DRY principle)</li>
+<li>Improving readability</li>
+<li>Breaking large problems into smaller modules</li>
+</ul>
+<hr>
+<h4 id="Types-of-Functions"><strong>Types of Functions</strong><a class="anchor-link" href="#Types-of-Functions"></a></h4><ol>
+<li><p><strong>Built-in Functions</strong>: Already available in Python.
+🔹 Examples: <code>print()</code>, <code>len()</code>, <code>type()</code>, <code>sum()</code>, <code>range()</code></p>
+</li>
+<li><p><strong>User-defined Functions</strong>: Functions you write yourself using <code>def</code> keyword.</p>
+</li>
+<li><p><strong>Lambda Functions</strong>: Short anonymous functions created using <code>lambda</code> keyword.</p>
+</li>
+</ol>
+<hr>
+<h4 id="Defining-a-Function"><strong>Defining a Function</strong><a class="anchor-link" href="#Defining-a-Function"></a></h4><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</pre></div>
+<h4 id="Calling-a-Function"><strong>Calling a Function</strong><a class="anchor-link" href="#Calling-a-Function"></a></h4><div class="highlight"><pre><span></span><span class="n">greet</span><span class="p">()</span>  <span class="c1"># Output: Hello, World!</span>
+</pre></div>
+<hr>
+<h4 id="Function-with-Parameters"><strong>Function with Parameters</strong><a class="anchor-link" href="#Function-with-Parameters"></a></h4><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Purushotham&quot;</span><span class="p">)</span>  <span class="c1"># Output: Hello, Purushotham!</span>
+</pre></div>
+<hr>
+<h4 id="Function-with-Return-Value"><strong>Function with Return Value</strong><a class="anchor-link" href="#Function-with-Return-Value"></a></h4><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 8</span>
+</pre></div>
+<hr>
+<h4 id="Default-Arguments"><strong>Default Arguments</strong><a class="anchor-link" href="#Default-Arguments"></a></h4><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;User&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+
+<span class="n">greet</span><span class="p">()</span>          <span class="c1"># Output: Hello, User!</span>
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;AI Bro&quot;</span><span class="p">)</span>  <span class="c1"># Output: Hello, AI Bro!</span>
+</pre></div>
+<hr>
+<h4 id="Variable-Length-Arguments"><strong>Variable-Length Arguments</strong><a class="anchor-link" href="#Variable-Length-Arguments"></a></h4><ul>
+<li><code>*args</code> → multiple positional arguments (tuple)</li>
+<li><code>**kwargs</code> → multiple keyword arguments (dict)</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">show_items</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+<span class="n">show_items</span><span class="p">(</span><span class="s2">&quot;Pen&quot;</span><span class="p">,</span> <span class="s2">&quot;Notebook&quot;</span><span class="p">,</span> <span class="s2">&quot;Pencil&quot;</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="Lambda-Functions"><strong>Lambda Functions</strong><a class="anchor-link" href="#Lambda-Functions"></a></h4><p>Short, anonymous function (used for simple operations)</p>
+<div class="highlight"><pre><span></span><span class="n">square</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Output: 25</span>
+</pre></div>
+<hr>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># Documentation (also called a docstring) is a special string that explains what a function does, its parameters, return values, and usage.</span>
+
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Adds two numbers.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    a (int or float): First number</span>
+<span class="sd">    b (int or float): Second number</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int or float: The sum of a and b</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># Accessing Documentation</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+    Adds two numbers.
+
+    Parameters:
+    a (int or float): First number
+    b (int or float): Second number
+
+    Returns:
+    int or float: The sum of a and b
+    
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">add</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Help on function add in module __main__:
+
+add(a, b)
+    Adds two numbers.
+    
+    Parameters:
+    a (int or float): First number
+    b (int or float): Second number
+    
+    Returns:
+    int or float: The sum of a and b
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Help on class str in module builtins:
+
+class str(object)
+ |  str(object=&#39;&#39;) -&gt; str
+ |  str(bytes_or_buffer[, encoding[, errors]]) -&gt; str
+ |  
+ |  Create a new string object from the given object. If encoding or
+ |  errors is specified, then the object must expose a data buffer
+ |  that will be decoded using the given encoding and error handler.
+ |  Otherwise, returns the result of object.__str__() (if defined)
+ |  or repr(object).
+ |  encoding defaults to sys.getdefaultencoding().
+ |  errors defaults to &#39;strict&#39;.
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, value, /)
+ |      Return self+value.
+ |  
+ |  __contains__(self, key, /)
+ |      Return key in self.
+ |  
+ |  __eq__(self, value, /)
+ |      Return self==value.
+ |  
+ |  __format__(self, format_spec, /)
+ |      Return a formatted version of the string as described by format_spec.
+ |  
+ |  __ge__(self, value, /)
+ |      Return self&gt;=value.
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __getitem__(self, key, /)
+ |      Return self[key].
+ |  
+ |  __getnewargs__(...)
+ |  
+ |  __gt__(self, value, /)
+ |      Return self&gt;value.
+ |  
+ |  __hash__(self, /)
+ |      Return hash(self).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __le__(self, value, /)
+ |      Return self&lt;=value.
+ |  
+ |  __len__(self, /)
+ |      Return len(self).
+ |  
+ |  __lt__(self, value, /)
+ |      Return self&lt;value.
+ |  
+ |  __mod__(self, value, /)
+ |      Return self%value.
+ |  
+ |  __mul__(self, value, /)
+ |      Return self*value.
+ |  
+ |  __ne__(self, value, /)
+ |      Return self!=value.
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |  
+ |  __rmod__(self, value, /)
+ |      Return value%self.
+ |  
+ |  __rmul__(self, value, /)
+ |      Return value*self.
+ |  
+ |  __sizeof__(self, /)
+ |      Return the size of the string in memory, in bytes.
+ |  
+ |  __str__(self, /)
+ |      Return str(self).
+ |  
+ |  capitalize(self, /)
+ |      Return a capitalized version of the string.
+ |      
+ |      More specifically, make the first character have upper case and the rest lower
+ |      case.
+ |  
+ |  casefold(self, /)
+ |      Return a version of the string suitable for caseless comparisons.
+ |  
+ |  center(self, width, fillchar=&#39; &#39;, /)
+ |      Return a centered string of length width.
+ |      
+ |      Padding is done using the specified fill character (default is a space).
+ |  
+ |  count(...)
+ |      S.count(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the number of non-overlapping occurrences of substring sub in
+ |      string S[start:end].  Optional arguments start and end are
+ |      interpreted as in slice notation.
+ |  
+ |  encode(self, /, encoding=&#39;utf-8&#39;, errors=&#39;strict&#39;)
+ |      Encode the string using the codec registered for encoding.
+ |      
+ |      encoding
+ |        The encoding in which to encode the string.
+ |      errors
+ |        The error handling scheme to use for encoding errors.
+ |        The default is &#39;strict&#39; meaning that encoding errors raise a
+ |        UnicodeEncodeError.  Other possible values are &#39;ignore&#39;, &#39;replace&#39; and
+ |        &#39;xmlcharrefreplace&#39; as well as any other name registered with
+ |        codecs.register_error that can handle UnicodeEncodeErrors.
+ |  
+ |  endswith(...)
+ |      S.endswith(suffix[, start[, end]]) -&gt; bool
+ |      
+ |      Return True if S ends with the specified suffix, False otherwise.
+ |      With optional start, test S beginning at that position.
+ |      With optional end, stop comparing S at that position.
+ |      suffix can also be a tuple of strings to try.
+ |  
+ |  expandtabs(self, /, tabsize=8)
+ |      Return a copy where all tab characters are expanded using spaces.
+ |      
+ |      If tabsize is not given, a tab size of 8 characters is assumed.
+ |  
+ |  find(...)
+ |      S.find(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the lowest index in S where substring sub is found,
+ |      such that sub is contained within S[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Return -1 on failure.
+ |  
+ |  format(...)
+ |      S.format(*args, **kwargs) -&gt; str
+ |      
+ |      Return a formatted version of S, using substitutions from args and kwargs.
+ |      The substitutions are identified by braces (&#39;{&#39; and &#39;}&#39;).
+ |  
+ |  format_map(...)
+ |      S.format_map(mapping) -&gt; str
+ |      
+ |      Return a formatted version of S, using substitutions from mapping.
+ |      The substitutions are identified by braces (&#39;{&#39; and &#39;}&#39;).
+ |  
+ |  index(...)
+ |      S.index(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the lowest index in S where substring sub is found,
+ |      such that sub is contained within S[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Raises ValueError when the substring is not found.
+ |  
+ |  isalnum(self, /)
+ |      Return True if the string is an alpha-numeric string, False otherwise.
+ |      
+ |      A string is alpha-numeric if all characters in the string are alpha-numeric and
+ |      there is at least one character in the string.
+ |  
+ |  isalpha(self, /)
+ |      Return True if the string is an alphabetic string, False otherwise.
+ |      
+ |      A string is alphabetic if all characters in the string are alphabetic and there
+ |      is at least one character in the string.
+ |  
+ |  isascii(self, /)
+ |      Return True if all characters in the string are ASCII, False otherwise.
+ |      
+ |      ASCII characters have code points in the range U+0000-U+007F.
+ |      Empty string is ASCII too.
+ |  
+ |  isdecimal(self, /)
+ |      Return True if the string is a decimal string, False otherwise.
+ |      
+ |      A string is a decimal string if all characters in the string are decimal and
+ |      there is at least one character in the string.
+ |  
+ |  isdigit(self, /)
+ |      Return True if the string is a digit string, False otherwise.
+ |      
+ |      A string is a digit string if all characters in the string are digits and there
+ |      is at least one character in the string.
+ |  
+ |  isidentifier(self, /)
+ |      Return True if the string is a valid Python identifier, False otherwise.
+ |      
+ |      Call keyword.iskeyword(s) to test whether string s is a reserved identifier,
+ |      such as &#34;def&#34; or &#34;class&#34;.
+ |  
+ |  islower(self, /)
+ |      Return True if the string is a lowercase string, False otherwise.
+ |      
+ |      A string is lowercase if all cased characters in the string are lowercase and
+ |      there is at least one cased character in the string.
+ |  
+ |  isnumeric(self, /)
+ |      Return True if the string is a numeric string, False otherwise.
+ |      
+ |      A string is numeric if all characters in the string are numeric and there is at
+ |      least one character in the string.
+ |  
+ |  isprintable(self, /)
+ |      Return True if the string is printable, False otherwise.
+ |      
+ |      A string is printable if all of its characters are considered printable in
+ |      repr() or if it is empty.
+ |  
+ |  isspace(self, /)
+ |      Return True if the string is a whitespace string, False otherwise.
+ |      
+ |      A string is whitespace if all characters in the string are whitespace and there
+ |      is at least one character in the string.
+ |  
+ |  istitle(self, /)
+ |      Return True if the string is a title-cased string, False otherwise.
+ |      
+ |      In a title-cased string, upper- and title-case characters may only
+ |      follow uncased characters and lowercase characters only cased ones.
+ |  
+ |  isupper(self, /)
+ |      Return True if the string is an uppercase string, False otherwise.
+ |      
+ |      A string is uppercase if all cased characters in the string are uppercase and
+ |      there is at least one cased character in the string.
+ |  
+ |  join(self, iterable, /)
+ |      Concatenate any number of strings.
+ |      
+ |      The string whose method is called is inserted in between each given string.
+ |      The result is returned as a new string.
+ |      
+ |      Example: &#39;.&#39;.join([&#39;ab&#39;, &#39;pq&#39;, &#39;rs&#39;]) -&gt; &#39;ab.pq.rs&#39;
+ |  
+ |  ljust(self, width, fillchar=&#39; &#39;, /)
+ |      Return a left-justified string of length width.
+ |      
+ |      Padding is done using the specified fill character (default is a space).
+ |  
+ |  lower(self, /)
+ |      Return a copy of the string converted to lowercase.
+ |  
+ |  lstrip(self, chars=None, /)
+ |      Return a copy of the string with leading whitespace removed.
+ |      
+ |      If chars is given and not None, remove characters in chars instead.
+ |  
+ |  partition(self, sep, /)
+ |      Partition the string into three parts using the given separator.
+ |      
+ |      This will search for the separator in the string.  If the separator is found,
+ |      returns a 3-tuple containing the part before the separator, the separator
+ |      itself, and the part after it.
+ |      
+ |      If the separator is not found, returns a 3-tuple containing the original string
+ |      and two empty strings.
+ |  
+ |  removeprefix(self, prefix, /)
+ |      Return a str with the given prefix string removed if present.
+ |      
+ |      If the string starts with the prefix string, return string[len(prefix):].
+ |      Otherwise, return a copy of the original string.
+ |  
+ |  removesuffix(self, suffix, /)
+ |      Return a str with the given suffix string removed if present.
+ |      
+ |      If the string ends with the suffix string and that suffix is not empty,
+ |      return string[:-len(suffix)]. Otherwise, return a copy of the original
+ |      string.
+ |  
+ |  replace(self, old, new, count=-1, /)
+ |      Return a copy with all occurrences of substring old replaced by new.
+ |      
+ |        count
+ |          Maximum number of occurrences to replace.
+ |          -1 (the default value) means replace all occurrences.
+ |      
+ |      If the optional argument count is given, only the first count occurrences are
+ |      replaced.
+ |  
+ |  rfind(...)
+ |      S.rfind(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the highest index in S where substring sub is found,
+ |      such that sub is contained within S[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Return -1 on failure.
+ |  
+ |  rindex(...)
+ |      S.rindex(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the highest index in S where substring sub is found,
+ |      such that sub is contained within S[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Raises ValueError when the substring is not found.
+ |  
+ |  rjust(self, width, fillchar=&#39; &#39;, /)
+ |      Return a right-justified string of length width.
+ |      
+ |      Padding is done using the specified fill character (default is a space).
+ |  
+ |  rpartition(self, sep, /)
+ |      Partition the string into three parts using the given separator.
+ |      
+ |      This will search for the separator in the string, starting at the end. If
+ |      the separator is found, returns a 3-tuple containing the part before the
+ |      separator, the separator itself, and the part after it.
+ |      
+ |      If the separator is not found, returns a 3-tuple containing two empty strings
+ |      and the original string.
+ |  
+ |  rsplit(self, /, sep=None, maxsplit=-1)
+ |      Return a list of the substrings in the string, using sep as the separator string.
+ |      
+ |        sep
+ |          The separator used to split the string.
+ |      
+ |          When set to None (the default value), will split on any whitespace
+ |          character (including \n \r \t \f and spaces) and will discard
+ |          empty strings from the result.
+ |        maxsplit
+ |          Maximum number of splits.
+ |          -1 (the default value) means no limit.
+ |      
+ |      Splitting starts at the end of the string and works to the front.
+ |  
+ |  rstrip(self, chars=None, /)
+ |      Return a copy of the string with trailing whitespace removed.
+ |      
+ |      If chars is given and not None, remove characters in chars instead.
+ |  
+ |  split(self, /, sep=None, maxsplit=-1)
+ |      Return a list of the substrings in the string, using sep as the separator string.
+ |      
+ |        sep
+ |          The separator used to split the string.
+ |      
+ |          When set to None (the default value), will split on any whitespace
+ |          character (including \n \r \t \f and spaces) and will discard
+ |          empty strings from the result.
+ |        maxsplit
+ |          Maximum number of splits.
+ |          -1 (the default value) means no limit.
+ |      
+ |      Splitting starts at the front of the string and works to the end.
+ |      
+ |      Note, str.split() is mainly useful for data that has been intentionally
+ |      delimited.  With natural text that includes punctuation, consider using
+ |      the regular expression module.
+ |  
+ |  splitlines(self, /, keepends=False)
+ |      Return a list of the lines in the string, breaking at line boundaries.
+ |      
+ |      Line breaks are not included in the resulting list unless keepends is given and
+ |      true.
+ |  
+ |  startswith(...)
+ |      S.startswith(prefix[, start[, end]]) -&gt; bool
+ |      
+ |      Return True if S starts with the specified prefix, False otherwise.
+ |      With optional start, test S beginning at that position.
+ |      With optional end, stop comparing S at that position.
+ |      prefix can also be a tuple of strings to try.
+ |  
+ |  strip(self, chars=None, /)
+ |      Return a copy of the string with leading and trailing whitespace removed.
+ |      
+ |      If chars is given and not None, remove characters in chars instead.
+ |  
+ |  swapcase(self, /)
+ |      Convert uppercase characters to lowercase and lowercase characters to uppercase.
+ |  
+ |  title(self, /)
+ |      Return a version of the string where each word is titlecased.
+ |      
+ |      More specifically, words start with uppercased characters and all remaining
+ |      cased characters have lower case.
+ |  
+ |  translate(self, table, /)
+ |      Replace each character in the string using the given translation table.
+ |      
+ |        table
+ |          Translation table, which must be a mapping of Unicode ordinals to
+ |          Unicode ordinals, strings, or None.
+ |      
+ |      The table must implement lookup/indexing via __getitem__, for instance a
+ |      dictionary or list.  If this operation raises LookupError, the character is
+ |      left untouched.  Characters mapped to None are deleted.
+ |  
+ |  upper(self, /)
+ |      Return a copy of the string converted to uppercase.
+ |  
+ |  zfill(self, width, /)
+ |      Pad a numeric string with zeros on the left, to fill a field of the given width.
+ |      
+ |      The string is never truncated.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  __new__(*args, **kwargs)
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  maketrans(...)
+ |      Return a translation table usable for str.translate().
+ |      
+ |      If there is only one argument, it must be a dictionary mapping Unicode
+ |      ordinals (integers) or characters to Unicode ordinals, strings or None.
+ |      Character keys will be then converted to ordinals.
+ |      If there are two arguments, they must be strings of equal length, and
+ |      in the resulting dictionary, each character in x will be mapped to the
+ |      character at the same position in y. If there is a third argument, it
+ |      must be a string, whose characters will be mapped to None in the result.
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Help on class list in module builtins:
+
+class list(object)
+ |  list(iterable=(), /)
+ |  
+ |  Built-in mutable sequence.
+ |  
+ |  If no argument is given, the constructor creates a new empty list.
+ |  The argument must be an iterable if specified.
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, value, /)
+ |      Return self+value.
+ |  
+ |  __contains__(self, key, /)
+ |      Return key in self.
+ |  
+ |  __delitem__(self, key, /)
+ |      Delete self[key].
+ |  
+ |  __eq__(self, value, /)
+ |      Return self==value.
+ |  
+ |  __ge__(self, value, /)
+ |      Return self&gt;=value.
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __getitem__(...)
+ |      x.__getitem__(y) &lt;==&gt; x[y]
+ |  
+ |  __gt__(self, value, /)
+ |      Return self&gt;value.
+ |  
+ |  __iadd__(self, value, /)
+ |      Implement self+=value.
+ |  
+ |  __imul__(self, value, /)
+ |      Implement self*=value.
+ |  
+ |  __init__(self, /, *args, **kwargs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __le__(self, value, /)
+ |      Return self&lt;=value.
+ |  
+ |  __len__(self, /)
+ |      Return len(self).
+ |  
+ |  __lt__(self, value, /)
+ |      Return self&lt;value.
+ |  
+ |  __mul__(self, value, /)
+ |      Return self*value.
+ |  
+ |  __ne__(self, value, /)
+ |      Return self!=value.
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |  
+ |  __reversed__(self, /)
+ |      Return a reverse iterator over the list.
+ |  
+ |  __rmul__(self, value, /)
+ |      Return value*self.
+ |  
+ |  __setitem__(self, key, value, /)
+ |      Set self[key] to value.
+ |  
+ |  __sizeof__(self, /)
+ |      Return the size of the list in memory, in bytes.
+ |  
+ |  append(self, object, /)
+ |      Append object to the end of the list.
+ |  
+ |  clear(self, /)
+ |      Remove all items from list.
+ |  
+ |  copy(self, /)
+ |      Return a shallow copy of the list.
+ |  
+ |  count(self, value, /)
+ |      Return number of occurrences of value.
+ |  
+ |  extend(self, iterable, /)
+ |      Extend list by appending elements from the iterable.
+ |  
+ |  index(self, value, start=0, stop=9223372036854775807, /)
+ |      Return first index of value.
+ |      
+ |      Raises ValueError if the value is not present.
+ |  
+ |  insert(self, index, object, /)
+ |      Insert object before index.
+ |  
+ |  pop(self, index=-1, /)
+ |      Remove and return item at index (default last).
+ |      
+ |      Raises IndexError if list is empty or index is out of range.
+ |  
+ |  remove(self, value, /)
+ |      Remove first occurrence of value.
+ |      
+ |      Raises ValueError if the value is not present.
+ |  
+ |  reverse(self, /)
+ |      Reverse *IN PLACE*.
+ |  
+ |  sort(self, /, *, key=None, reverse=False)
+ |      Sort the list in ascending order and return None.
+ |      
+ |      The sort is in-place (i.e. the list itself is modified) and stable (i.e. the
+ |      order of two equal elements is maintained).
+ |      
+ |      If a key function is given, apply it once to each list item and sort them,
+ |      ascending or descending, according to their function values.
+ |      
+ |      The reverse flag can be set to sort in descending order.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods defined here:
+ |  
+ |  __class_getitem__(...)
+ |      See PEP 585
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  __new__(*args, **kwargs)
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __hash__ = None
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Help on class dict in module builtins:
+
+class dict(object)
+ |  dict() -&gt; new empty dictionary
+ |  dict(mapping) -&gt; new dictionary initialized from a mapping object&#39;s
+ |      (key, value) pairs
+ |  dict(iterable) -&gt; new dictionary initialized as if via:
+ |      d = {}
+ |      for k, v in iterable:
+ |          d[k] = v
+ |  dict(**kwargs) -&gt; new dictionary initialized with the name=value pairs
+ |      in the keyword argument list.  For example:  dict(one=1, two=2)
+ |  
+ |  Built-in subclasses:
+ |      StgDict
+ |  
+ |  Methods defined here:
+ |  
+ |  __contains__(self, key, /)
+ |      True if the dictionary has the specified key, else False.
+ |  
+ |  __delitem__(self, key, /)
+ |      Delete self[key].
+ |  
+ |  __eq__(self, value, /)
+ |      Return self==value.
+ |  
+ |  __ge__(self, value, /)
+ |      Return self&gt;=value.
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __getitem__(...)
+ |      x.__getitem__(y) &lt;==&gt; x[y]
+ |  
+ |  __gt__(self, value, /)
+ |      Return self&gt;value.
+ |  
+ |  __init__(self, /, *args, **kwargs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  __ior__(self, value, /)
+ |      Return self|=value.
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __le__(self, value, /)
+ |      Return self&lt;=value.
+ |  
+ |  __len__(self, /)
+ |      Return len(self).
+ |  
+ |  __lt__(self, value, /)
+ |      Return self&lt;value.
+ |  
+ |  __ne__(self, value, /)
+ |      Return self!=value.
+ |  
+ |  __or__(self, value, /)
+ |      Return self|value.
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |  
+ |  __reversed__(self, /)
+ |      Return a reverse iterator over the dict keys.
+ |  
+ |  __ror__(self, value, /)
+ |      Return value|self.
+ |  
+ |  __setitem__(self, key, value, /)
+ |      Set self[key] to value.
+ |  
+ |  __sizeof__(...)
+ |      D.__sizeof__() -&gt; size of D in memory, in bytes
+ |  
+ |  clear(...)
+ |      D.clear() -&gt; None.  Remove all items from D.
+ |  
+ |  copy(...)
+ |      D.copy() -&gt; a shallow copy of D
+ |  
+ |  get(self, key, default=None, /)
+ |      Return the value for key if key is in the dictionary, else default.
+ |  
+ |  items(...)
+ |      D.items() -&gt; a set-like object providing a view on D&#39;s items
+ |  
+ |  keys(...)
+ |      D.keys() -&gt; a set-like object providing a view on D&#39;s keys
+ |  
+ |  pop(...)
+ |      D.pop(k[,d]) -&gt; v, remove specified key and return the corresponding value.
+ |      
+ |      If the key is not found, return the default if given; otherwise,
+ |      raise a KeyError.
+ |  
+ |  popitem(self, /)
+ |      Remove and return a (key, value) pair as a 2-tuple.
+ |      
+ |      Pairs are returned in LIFO (last-in, first-out) order.
+ |      Raises KeyError if the dict is empty.
+ |  
+ |  setdefault(self, key, default=None, /)
+ |      Insert key with a value of default if key is not in the dictionary.
+ |      
+ |      Return the value for key if key is in the dictionary, else default.
+ |  
+ |  update(...)
+ |      D.update([E, ]**F) -&gt; None.  Update D from dict/iterable E and F.
+ |      If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]
+ |      If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v
+ |      In either case, this is followed by: for k in F:  D[k] = F[k]
+ |  
+ |  values(...)
+ |      D.values() -&gt; an object providing a view on D&#39;s values
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods defined here:
+ |  
+ |  __class_getitem__(...)
+ |      See PEP 585
+ |  
+ |  fromkeys(iterable, value=None, /)
+ |      Create a new dictionary with keys from iterable and values set to value.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  __new__(*args, **kwargs)
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __hash__ = None
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="https://blog.finxter.com/wp-content/uploads/2018/07/CheatSheet-Python-5-Functions-and-Tricks-791x1024.png"/></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Higher-Order-Functions"><strong>Higher-Order Functions</strong><a class="anchor-link" href="#Higher-Order-Functions"></a></h4><p>A <strong>Higher-Order Function</strong> is a function that:</p>
+<ol>
+<li><strong>Takes one or more functions as arguments</strong>, and/or</li>
+<li><strong>Returns a function as its result</strong></li>
+</ol>
+<p>In short:</p>
+<blockquote><p>"Functions that work with other functions."</p>
+</blockquote>
+<hr>
+<h3 id="Examples-of-Higher-Order-Functions-in-Python">Examples of Higher-Order Functions in Python<a class="anchor-link" href="#Examples-of-Higher-Order-Functions-in-Python"></a></h3><hr>
+<h4 id="1.-Passing-a-Function-as-an-Argument">1. <strong>Passing a Function as an Argument</strong><a class="anchor-link" href="#1.-Passing-a-Function-as-an-Argument"></a></h4><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span>
+
+<span class="k">def</span> <span class="nf">call_func</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">call_func</span><span class="p">(</span><span class="n">greet</span><span class="p">,</span> <span class="s2">&quot;Purushotham&quot;</span><span class="p">))</span>
+<span class="c1"># Output: Hello, Purushotham!</span>
+</pre></div>
+<hr>
+<h4 id="2.-Returning-a-Function-from-Another-Function">2. <strong>Returning a Function from Another Function</strong><a class="anchor-link" href="#2.-Returning-a-Function-from-Another-Function"></a></h4><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">outer</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="n">inner</span>
+
+<span class="n">add5</span> <span class="o">=</span> <span class="n">outer</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add5</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>  <span class="c1"># Output: 15</span>
+</pre></div>
+<hr>
+<h3 id="Built-in-Higher-Order-Functions">Built-in Higher-Order Functions<a class="anchor-link" href="#Built-in-Higher-Order-Functions"></a></h3><p>Python provides several built-in higher-order functions:</p>
+<hr>
+<h4 id="map(function,-iterable)"><code>map(function, iterable)</code><a class="anchor-link" href="#map(function,-iterable)"></a></h4><p>Applies a function to every item in an iterable.</p>
+<div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">squares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">nums</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>  <span class="c1"># Output: [1, 4, 9, 16]</span>
+</pre></div>
+<hr>
+<h4 id="filter(function,-iterable)"><code>filter(function, iterable)</code><a class="anchor-link" href="#filter(function,-iterable)"></a></h4><p>Filters items where the function returns <code>True</code>.</p>
+<div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">evens</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nums</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">evens</span><span class="p">)</span>  <span class="c1"># Output: [2, 4]</span>
+</pre></div>
+<hr>
+<h4 id="reduce(function,-iterable)"><code>reduce(function, iterable)</code><a class="anchor-link" href="#reduce(function,-iterable)"></a></h4><p>Applies a function cumulatively to reduce the iterable to a single value.</p>
+<p>Requires:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">product</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">,</span> <span class="n">nums</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>  <span class="c1"># Output: 24</span>
+</pre></div>
+<hr>
+<h4 id="Combine-Them:">Combine Them:<a class="anchor-link" href="#Combine-Them:"></a></h4><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># Filter even numbers, square them, then sum the result</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span>
+                <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span>
+                    <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nums</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 20 (2² + 4² = 4 + 16)</span>
+</pre></div>
+<hr>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Python-Advanced-Functions">Python <strong>Advanced Functions</strong><a class="anchor-link" href="#Python-Advanced-Functions"></a></h4><h4 id="1.-Function-Decorators-(@decorator)">1. <strong>Function Decorators (@decorator)</strong><a class="anchor-link" href="#1.-Function-Decorators-(@decorator)"></a></h4><p>A <strong>decorator</strong> modifies or enhances the behavior of a function <strong>without changing its code</strong>.</p>
+<h5 id="Basic-Decorator">Basic Decorator<a class="anchor-link" href="#Basic-Decorator"></a></h5><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Before call&quot;</span><span class="p">)</span>
+        <span class="n">func</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After call&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nd">@my_decorator</span>
+<span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
+<span class="n">say_hello</span><span class="p">()</span>
+</pre></div>
+<hr>
+<h4 id="2.-Closures-(Function-inside-function)">2. <strong>Closures (Function inside function)</strong><a class="anchor-link" href="#2.-Closures-(Function-inside-function)"></a></h4><p>A <strong>closure</strong> remembers the environment in which it was created.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">outer</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="n">inner</span>
+
+<span class="n">add5</span> <span class="o">=</span> <span class="n">outer</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add5</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>  <span class="c1"># Output: 8</span>
+</pre></div>
+<hr>
+<h4 id="3.-First-Class-Functions">3. <strong>First-Class Functions</strong><a class="anchor-link" href="#3.-First-Class-Functions"></a></h4><p>In Python, functions can be:</p>
+<ul>
+<li>Assigned to variables</li>
+<li>Passed as arguments</li>
+<li>Returned from other functions</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">shout</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">whisper</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">))</span>
+
+<span class="n">greet</span><span class="p">(</span><span class="n">shout</span><span class="p">)</span>
+<span class="n">greet</span><span class="p">(</span><span class="n">whisper</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="4.-*args-and-%60kwargs%60---Advanced-Use**">4. <strong><code>*args</code> and `</strong>kwargs` - Advanced Use**<a class="anchor-link" href="#4.-*args-and-%60kwargs%60---Advanced-Use**"></a></h4><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">demo</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Positional:&quot;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Keyword:&quot;</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
+
+<span class="n">demo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Purushotham&quot;</span><span class="p">,</span> <span class="n">job</span><span class="o">=</span><span class="s2">&quot;ML&quot;</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="5.-Partial-Functions-(functools.partial)">5. <strong>Partial Functions (<code>functools.partial</code>)</strong><a class="anchor-link" href="#5.-Partial-Functions-(functools.partial)"></a></h4><p>Fix certain arguments of a function and generate a new function.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+
+<span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">exponent</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">base</span> <span class="o">**</span> <span class="n">exponent</span>
+
+<span class="n">square</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">power</span><span class="p">,</span> <span class="n">exponent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Output: 25</span>
+</pre></div>
+<hr>
+<h4 id="6.-Anonymous-Functions-(Lambda-with-map,-filter,-reduce)">6. <strong>Anonymous Functions (Lambda with map, filter, reduce)</strong><a class="anchor-link" href="#6.-Anonymous-Functions-(Lambda-with-map,-filter,-reduce)"></a></h4><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="c1"># map: apply function to each item</span>
+<span class="n">squares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">nums</span><span class="p">))</span>
+
+<span class="c1"># filter: filter elements</span>
+<span class="n">even</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nums</span><span class="p">))</span>
+
+<span class="c1"># reduce: accumulate results</span>
+<span class="n">product</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">,</span> <span class="n">nums</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="7.-Generator-Functions-(yield)">7. <strong>Generator Functions (<code>yield</code>)</strong><a class="anchor-link" href="#7.-Generator-Functions-(yield)"></a></h4><p>Efficient memory handling for large sequences.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_up_to</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">i</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">count_up_to</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="8.-Function-Annotations-(Type-Hints)">8. <strong>Function Annotations (Type Hints)</strong><a class="anchor-link" href="#8.-Function-Annotations-(Type-Hints)"></a></h4><p>Improves readability and debugging.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+<hr>
+<h4 id="9.-Introspection-Tools">9. <strong>Introspection Tools</strong><a class="anchor-link" href="#9.-Introspection-Tools"></a></h4><p>Use built-in tools to examine functions:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="vm">__annotations__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">callable</span><span class="p">(</span><span class="n">sample</span><span class="p">))</span>
+</pre></div>
+<hr>
+<h4 id="10.-Function-Caching-(Memoization)">10. <strong>Function Caching (Memoization)</strong><a class="anchor-link" href="#10.-Function-Caching-(Memoization)"></a></h4><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+
+<span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+<hr>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Python-OOPS">Python OOPS<a class="anchor-link" href="#Python-OOPS"></a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Object-Oriented Programming (OOP) is a programming paradigm centered around <strong>objects</strong> and <strong>classes</strong>. Python supports OOP and allows you to model real-world entities.</p>
+<hr>
+<h4 id="Key-OOP-Concepts-in-Python">Key OOP Concepts in Python<a class="anchor-link" href="#Key-OOP-Concepts-in-Python"></a></h4><table>
+<thead><tr>
+<th>Concept</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Class</strong></td>
+<td>Blueprint for creating objects</td>
+</tr>
+<tr>
+<td><strong>Object</strong></td>
+<td>Instance of a class</td>
+</tr>
+<tr>
+<td><strong>Constructor</strong></td>
+<td><code>__init__</code> method used to initialize objects</td>
+</tr>
+<tr>
+<td><strong>Encapsulation</strong></td>
+<td>Hiding internal data using access specifiers (<code>_</code>, <code>__</code>)</td>
+</tr>
+<tr>
+<td><strong>Abstraction</strong></td>
+<td>Hiding unnecessary implementation details</td>
+</tr>
+<tr>
+<td><strong>Inheritance</strong></td>
+<td>One class (child) inherits properties from another (parent)</td>
+</tr>
+<tr>
+<td><strong>Polymorphism</strong></td>
+<td>Ability to take many forms (method overriding/overloading)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="1.-Class-and-Object">1. <strong>Class and Object</strong><a class="anchor-link" href="#1.-Class-and-Object"></a></h3><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">brand</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">brand</span> <span class="o">=</span> <span class="n">brand</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+
+    <span class="k">def</span> <span class="nf">drive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">brand</span><span class="si">}</span><span class="s2"> is driving.&quot;</span><span class="p">)</span>
+
+<span class="n">my_car</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&quot;Toyota&quot;</span><span class="p">,</span> <span class="s2">&quot;Red&quot;</span><span class="p">)</span>
+<span class="n">my_car</span><span class="o">.</span><span class="n">drive</span><span class="p">()</span>  <span class="c1"># Output: Red Toyota is driving.</span>
+</pre></div>
+<hr>
+<h3 id="2.-Encapsulation">2. <strong>Encapsulation</strong><a class="anchor-link" href="#2.-Encapsulation"></a></h3><p>Protecting internal data.</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">balance</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__balance</span> <span class="o">=</span> <span class="n">balance</span>  <span class="c1"># private variable</span>
+
+    <span class="k">def</span> <span class="nf">get_balance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__balance</span>
+
+<span class="n">acc</span> <span class="o">=</span> <span class="n">BankAccount</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">acc</span><span class="o">.</span><span class="n">get_balance</span><span class="p">())</span>  <span class="c1"># ✅ 5000</span>
+<span class="c1"># print(acc.__balance)   # ❌ Error: private attribute</span>
+</pre></div>
+<hr>
+<h3 id="3.-Inheritance">3. <strong>Inheritance</strong><a class="anchor-link" href="#3.-Inheritance"></a></h3><p>Child class inherits from parent.</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Some sound&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bark&quot;</span><span class="p">)</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">sound</span><span class="p">()</span>  <span class="c1"># Output: Bark</span>
+</pre></div>
+<hr>
+<h3 id="4.-Polymorphism">4. <strong>Polymorphism</strong><a class="anchor-link" href="#4.-Polymorphism"></a></h3><p>Same method name, different behavior.</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Bird</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tweet&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Parrot</span><span class="p">(</span><span class="n">Bird</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Squawk&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">make_sound</span><span class="p">(</span><span class="n">bird</span><span class="p">):</span>
+    <span class="n">bird</span><span class="o">.</span><span class="n">speak</span><span class="p">()</span>
+
+<span class="n">make_sound</span><span class="p">(</span><span class="n">Parrot</span><span class="p">())</span>  <span class="c1"># Output: Squawk</span>
+</pre></div>
+<hr>
+<h3 id="5.-Abstraction">5. <strong>Abstraction</strong><a class="anchor-link" href="#5.-Abstraction"></a></h3><p>Hide implementation, show interface (via abstract classes).</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+<span class="k">class</span> <span class="nc">Shape</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">Circle</span><span class="p">(</span><span class="n">Shape</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">radius</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">area</span><span class="p">())</span>  <span class="c1"># Output: 78.5</span>
+</pre></div>
+<hr>
+<h3 id="%F0%9F%94%81-Summary-Table">&#128257; Summary Table<a class="anchor-link" href="#%F0%9F%94%81-Summary-Table"></a></h3><table>
+<thead><tr>
+<th>Concept</th>
+<th>Python Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class/Object</td>
+<td><code>class</code>, <code>__init__</code>, object</td>
+</tr>
+<tr>
+<td>Inheritance</td>
+<td><code>class Child(Parent)</code></td>
+</tr>
+<tr>
+<td>Polymorphism</td>
+<td>Method Overriding</td>
+</tr>
+<tr>
+<td>Encapsulation</td>
+<td><code>_protected</code>, <code>__private</code> vars</td>
+</tr>
+<tr>
+<td>Abstraction</td>
+<td><code>ABC</code>, <code>abstractmethod</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="https://data.templateroller.com/pdf_docs_html/2636/26367/2636798/beginner-s-python-cheat-sheet-classes_big.png" width=130% height=130%/></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="https://www.globalsqa.com/wp-content/uploads/2020/05/Beginners-Python-Cheat-Sheet-12-1.jpg"/></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><a href="https://www.tutorialspoint.com/python/pdf/python_classes_objects.pdf">https://www.tutorialspoint.com/python/pdf/python_classes_objects.pdf</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Python-File-Handling">Python File Handling<a class="anchor-link" href="#Python-File-Handling"></a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Python allows us to create, read, write, and delete files using built-in functions like <code>open()</code>, <code>read()</code>, <code>write()</code>, and <code>close()</code>.</p>
+<hr>
+<h4 id="Syntax:-open()">Syntax: <code>open()</code><a class="anchor-link" href="#Syntax:-open()"></a></h4><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;filename.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;mode&quot;</span><span class="p">)</span>
+</pre></div>
+<p><strong>Common modes:</strong></p>
+<table>
+<thead><tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'r'</code></td>
+<td>Read (default), file must exist</td>
+</tr>
+<tr>
+<td><code>'w'</code></td>
+<td>Write, creates or overwrites</td>
+</tr>
+<tr>
+<td><code>'a'</code></td>
+<td>Append, creates if not exists</td>
+</tr>
+<tr>
+<td><code>'x'</code></td>
+<td>Exclusive create, fails if exists</td>
+</tr>
+<tr>
+<td><code>'b'</code></td>
+<td>Binary mode (<code>rb</code>, <code>wb</code>, etc.)</td>
+</tr>
+<tr>
+<td><code>'t'</code></td>
+<td>Text mode (default, used with others)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="Reading-a-File">Reading a File<a class="anchor-link" href="#Reading-a-File"></a></h4><div class="highlight"><pre><span></span><span class="c1"># Read entire content</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sample.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+
+<span class="c1"># Read line by line</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sample.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+
+<span class="c1"># Read specific number of characters</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sample.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Reads 5 characters</span>
+</pre></div>
+<hr>
+<h4 id="Writing-to-a-File">Writing to a File<a class="anchor-link" href="#Writing-to-a-File"></a></h4><div class="highlight"><pre><span></span><span class="c1"># Overwrites the file if it exists</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, world!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Second line.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="Appending-to-a-File">Appending to a File<a class="anchor-link" href="#Appending-to-a-File"></a></h4><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This line will be added.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="Creating-a-New-File">Creating a New File<a class="anchor-link" href="#Creating-a-New-File"></a></h4><div class="highlight"><pre><span></span><span class="c1"># Fails if the file already exists</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;newfile.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Created new file.&quot;</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="Deleting-a-File">Deleting a File<a class="anchor-link" href="#Deleting-a-File"></a></h4><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;oldfile.txt&quot;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;oldfile.txt&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File does not exist&quot;</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="Checking-File/Folder-Existence">Checking File/Folder Existence<a class="anchor-link" href="#Checking-File/Folder-Existence"></a></h4><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;myfile.txt&quot;</span><span class="p">))</span>     <span class="c1"># True/False</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s2">&quot;myfile.txt&quot;</span><span class="p">))</span>     <span class="c1"># True if file</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s2">&quot;myfolder&quot;</span><span class="p">))</span>        <span class="c1"># True if folder</span>
+</pre></div>
+<hr>
+<h4 id="File-Object-Methods">File Object Methods<a class="anchor-link" href="#File-Object-Methods"></a></h4><table>
+<thead><tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>read()</code></td>
+<td>Reads entire file</td>
+</tr>
+<tr>
+<td><code>readline()</code></td>
+<td>Reads a single line</td>
+</tr>
+<tr>
+<td><code>readlines()</code></td>
+<td>Returns list of lines</td>
+</tr>
+<tr>
+<td><code>write()</code></td>
+<td>Writes to file</td>
+</tr>
+<tr>
+<td><code>writelines()</code></td>
+<td>Writes list of strings</td>
+</tr>
+<tr>
+<td><code>close()</code></td>
+<td>Closes the file</td>
+</tr>
+</tbody>
+</table>
+<p>Note: Use <code>with open(...)</code> to auto-close the file.</p>
+<hr>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="https://k0nze.dev/assets/posts/python-read-write-files/python_file_io_cheat_sheet_preview.png"/></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Python-Exception-Handling">Python Exception Handling<a class="anchor-link" href="#Python-Exception-Handling"></a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="What-is-Exception-Handling?">What is Exception Handling?<a class="anchor-link" href="#What-is-Exception-Handling?"></a></h4><p><strong>Exception</strong>: An error that occurs during the execution of a program, disrupting the normal flow.</p>
+<h4 id="Why-use-it?">Why use it?<a class="anchor-link" href="#Why-use-it?"></a></h4><p>To <strong>gracefully handle errors</strong> and keep the program from crashing.</p>
+<hr>
+<h4 id="Basic-Syntax">Basic Syntax<a class="anchor-link" href="#Basic-Syntax"></a></h4><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Code that may raise an exception</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cannot divide by zero.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No exceptions occurred.&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Always runs.&quot;</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="Key-Blocks-in-Exception-Handling">Key Blocks in Exception Handling<a class="anchor-link" href="#Key-Blocks-in-Exception-Handling"></a></h4><table>
+<thead><tr>
+<th>Block</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>try</code></td>
+<td>Code that may raise an exception</td>
+</tr>
+<tr>
+<td><code>except</code></td>
+<td>Block to catch and handle exceptions</td>
+</tr>
+<tr>
+<td><code>else</code></td>
+<td>Runs only if no exception occurs</td>
+</tr>
+<tr>
+<td><code>finally</code></td>
+<td>Runs no matter what (used for cleanup like closing files/db)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="Catching-Multiple-Exceptions">Catching Multiple Exceptions<a class="anchor-link" href="#Catching-Multiple-Exceptions"></a></h4><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error occurred: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="Generic-Exception-Handling">Generic Exception Handling<a class="anchor-link" href="#Generic-Exception-Handling"></a></h4><p>Not recommended unless you're logging or debugging.</p>
+<div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">something</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="Raising-Exceptions">Raising Exceptions<a class="anchor-link" href="#Raising-Exceptions"></a></h4><p>You can raise exceptions manually using <code>raise</code>.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Denominator cannot be zero.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+</pre></div>
+<hr>
+<h4 id="Common-Built-in-Exceptions-in-Python">Common Built-in Exceptions in Python<a class="anchor-link" href="#Common-Built-in-Exceptions-in-Python"></a></h4><table>
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ZeroDivisionError</code></td>
+<td>Division by zero</td>
+</tr>
+<tr>
+<td><code>ValueError</code></td>
+<td>Wrong value (e.g., <code>int('abc')</code>)</td>
+</tr>
+<tr>
+<td><code>TypeError</code></td>
+<td>Operation on incompatible types</td>
+</tr>
+<tr>
+<td><code>IndexError</code></td>
+<td>Index out of range (e.g., list[10])</td>
+</tr>
+<tr>
+<td><code>KeyError</code></td>
+<td>Accessing a missing dictionary key</td>
+</tr>
+<tr>
+<td><code>FileNotFoundError</code></td>
+<td>File not found during file operations</td>
+</tr>
+<tr>
+<td><code>AttributeError</code></td>
+<td>Invalid attribute access</td>
+</tr>
+<tr>
+<td><code>ImportError</code></td>
+<td>Error in importing module</td>
+</tr>
+<tr>
+<td><code>NameError</code></td>
+<td>Variable not defined</td>
+</tr>
+<tr>
+<td><code>StopIteration</code></td>
+<td>Raised by <code>next()</code> in loops when no item exists</td>
+</tr>
+<tr>
+<td><code>KeyboardInterrupt</code></td>
+<td>Interrupt by user using Ctrl+C</td>
+</tr>
+<tr>
+<td><code>MemoryError</code></td>
+<td>Out of memory</td>
+</tr>
+<tr>
+<td><code>AssertionError</code></td>
+<td>When <code>assert</code> statement fails</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="Example:-Handling-File-Errors">Example: Handling File Errors<a class="anchor-link" href="#Example:-Handling-File-Errors"></a></h4><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File not found.&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Operation complete.&quot;</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="Custom-Exceptions">Custom Exceptions<a class="anchor-link" href="#Custom-Exceptions"></a></h4><p>You can define your own error types by extending <code>Exception</code>.</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyCustomError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">raise</span> <span class="n">MyCustomError</span><span class="p">(</span><span class="s2">&quot;Something went wrong.&quot;</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="Summary-Diagram">Summary Diagram<a class="anchor-link" href="#Summary-Diagram"></a></h4>
+<pre><code>try:
+    risky_code()
+except SpecificError:
+    handle_it()
+except AnotherError as e:
+    handle_with_info(e)
+else:
+    no_errors()
+finally:
+    always_runs()</code></pre>
+<hr>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO70CFpjg5_9fEBRUk9YDECRFrHJJyQLwy6w&s"/></p>
+<p><img src="https://intellipaat.com/mediaFiles/2018/12/2.jpg" width=70%/></p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">TooYoungError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="n">age</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">TooYoungError</span><span class="p">(</span><span class="s2">"Must be 18+ to register."</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">register</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">TooYoungError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Debugging-in-Python">Debugging in Python<a class="anchor-link" href="#Debugging-in-Python"></a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Debugging is the process of finding and fixing errors (bugs) in code.</p>
+<hr>
+<h4 id="1.-Assertions">1. <strong>Assertions</strong><a class="anchor-link" href="#1.-Assertions"></a></h4><h4 id="What-are-Assertions?">What are Assertions?<a class="anchor-link" href="#What-are-Assertions?"></a></h4><p>Assertions are used to check if a condition is <strong>True</strong> at a specific point in the program.
+If it’s <strong>False</strong>, Python throws an <code>AssertionError</code>.</p>
+<div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">condition</span><span class="p">,</span> <span class="s2">&quot;Optional error message&quot;</span>
+</pre></div>
+<h4 id="Example:">Example:<a class="anchor-link" href="#Example:"></a></h4><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">assert</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x must be positive&quot;</span>
+</pre></div>
+<p>If <code>x = -1</code>, this will raise:</p>
+<div class="highlight"><pre><span></span>AssertionError: x must be positive
+</pre></div>
+<blockquote><p>Used to <strong>catch logic errors early</strong> during development.</p>
+</blockquote>
+<p><strong>Don’t use assertions for user input validation</strong> in production — they can be <strong>disabled</strong> with <code>python -O</code>.</p>
+<hr>
+<h4 id="2.-Traceback-as-a-String">2. <strong>Traceback as a String</strong><a class="anchor-link" href="#2.-Traceback-as-a-String"></a></h4><h4 id="What-is-Traceback?">What is Traceback?<a class="anchor-link" href="#What-is-Traceback?"></a></h4><p>A traceback is the <strong>stack trace</strong> showing where an error occurred.</p>
+<h4 id="How-to-capture-it-as-a-string?">How to capture it as a string?<a class="anchor-link" href="#How-to-capture-it-as-a-string?"></a></h4><p>Use the <code>traceback</code> module:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">traceback</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="n">tb_str</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Traceback as string:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">tb_str</span><span class="p">)</span>
+</pre></div>
+<h4 id="Why-use-it?">Why use it?<a class="anchor-link" href="#Why-use-it?"></a></h4><ul>
+<li>Useful for <strong>logging errors</strong></li>
+<li>Send error details in a response (e.g., web API)</li>
+<li>Store for debugging later</li>
+</ul>
+<hr>
+<h4 id="3.-Logging-in-Python">3. <strong>Logging in Python</strong><a class="anchor-link" href="#3.-Logging-in-Python"></a></h4><h5 id="What-is-Logging?">What is Logging?<a class="anchor-link" href="#What-is-Logging?"></a></h5><p>A <strong>flexible system</strong> for recording:</p>
+<ul>
+<li>Errors</li>
+<li>Warnings</li>
+<li>Info</li>
+<li>Debug messages</li>
+</ul>
+<p>More powerful and configurable than <code>print()</code>.</p>
+<hr>
+<h4 id="Basic-Logging-Setup">Basic Logging Setup<a class="anchor-link" href="#Basic-Logging-Setup"></a></h4><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;This is an info message.&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;This is a warning.&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Something went wrong.&quot;</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="Logging-Levels">Logging Levels<a class="anchor-link" href="#Logging-Levels"></a></h4><table>
+<thead><tr>
+<th>Level</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEBUG</td>
+<td>Detailed debugging info</td>
+</tr>
+<tr>
+<td>INFO</td>
+<td>General app flow messages</td>
+</tr>
+<tr>
+<td>WARNING</td>
+<td>Something unexpected happened</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>A serious problem occurred</td>
+</tr>
+<tr>
+<td>CRITICAL</td>
+<td>Very serious error</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="Log-to-a-File">Log to a File<a class="anchor-link" href="#Log-to-a-File"></a></h4><div class="highlight"><pre><span></span><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;app.log&#39;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> - </span><span class="si">%(levelname)s</span><span class="s1"> - </span><span class="si">%(message)s</span><span class="s1">&#39;</span>
+<span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;This goes to a file!&quot;</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h4 id="Logging-with-Tracebacks">Logging with Tracebacks<a class="anchor-link" href="#Logging-with-Tracebacks"></a></h4><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s2">&quot;Exception occurred&quot;</span><span class="p">)</span>
+</pre></div>
+<p>This prints both error message and full traceback!</p>
+<hr>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"This is an info message."</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">"This is a warning."</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">"Something went wrong."</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>WARNING:root:This is a warning.
+ERROR:root:Something went wrong.
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s1">'app.log'</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s1">'</span><span class="si">%(asctime)s</span><span class="s1"> - </span><span class="si">%(levelname)s</span><span class="s1"> - </span><span class="si">%(message)s</span><span class="s1">'</span>
+<span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">"This goes to a file!"</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>ERROR:root:This goes to a file!
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Python-Modules">Python Modules<a class="anchor-link" href="#Python-Modules"></a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="What-is-a-Python-Module?">What is a Python Module?<a class="anchor-link" href="#What-is-a-Python-Module?"></a></h4><p>A <strong>module</strong> is simply a <strong>Python file (<code>.py</code>) containing variables, functions, classes</strong>, etc., that you can import and reuse in other Python programs.</p>
+<blockquote><p>Purpose: Helps organize code, improve reusability, and maintainability.</p>
+</blockquote>
+<hr>
+<h3 id="Types-of-Modules">Types of Modules<a class="anchor-link" href="#Types-of-Modules"></a></h3><table>
+<thead><tr>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Built-in</strong></td>
+<td><code>math</code>, <code>os</code>, <code>sys</code>, <code>random</code></td>
+</tr>
+<tr>
+<td><strong>User-defined</strong></td>
+<td>Your own <code>.py</code> files</td>
+</tr>
+<tr>
+<td><strong>Third-party</strong></td>
+<td>Installed via pip like <code>numpy</code>, <code>pandas</code>, <code>requests</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="Using-Built-in-Modules">Using Built-in Modules<a class="anchor-link" href="#Using-Built-in-Modules"></a></h3><h4 id="Example:-math">Example: <code>math</code><a class="anchor-link" href="#Example:-math"></a></h4><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">))</span>        <span class="c1"># 5.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>              <span class="c1"># 3.141592653589793</span>
+</pre></div>
+<hr>
+<h3 id="Creating-Your-Own-Module">Creating Your Own Module<a class="anchor-link" href="#Creating-Your-Own-Module"></a></h3><p>File: <code>mymodule.py</code></p>
+<div class="highlight"><pre><span></span><span class="c1"># mymodule.py</span>
+<span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span>
+
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+</pre></div>
+<p>Now use it in another file:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mymodule</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mymodule</span><span class="o">.</span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Purushotham&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mymodule</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h3 id="import-Variants"><code>import</code> Variants<a class="anchor-link" href="#import-Variants"></a></h3><div class="highlight"><pre><span></span><span class="c1"># import whole module</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="c1"># import specific function</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="c1"># import with alias</span>
+<span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">m</span>
+<span class="n">m</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="c1"># import all (not recommended)</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+<hr>
+<h3 id="Using-__name__-==-%22__main__%22">Using <code>__name__ == "__main__"</code><a class="anchor-link" href="#Using-__name__-==-%22__main__%22"></a></h3><div class="highlight"><pre><span></span><span class="c1"># module_test.py</span>
+<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running test...&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">()</span>
+</pre></div>
+<p>This ensures the block only runs if <strong>file is executed directly</strong>, not when imported.</p>
+<hr>
+<h3 id="Useful-Built-in-Modules">Useful Built-in Modules<a class="anchor-link" href="#Useful-Built-in-Modules"></a></h3><table>
+<thead><tr>
+<th>Module</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>math</code></td>
+<td>Mathematical operations</td>
+</tr>
+<tr>
+<td><code>random</code></td>
+<td>Random number generation</td>
+</tr>
+<tr>
+<td><code>datetime</code></td>
+<td>Date and time manipulation</td>
+</tr>
+<tr>
+<td><code>os</code></td>
+<td>OS-level operations (files, dirs)</td>
+</tr>
+<tr>
+<td><code>sys</code></td>
+<td>Command line args, interpreter info</td>
+</tr>
+<tr>
+<td><code>json</code></td>
+<td>Work with JSON data</td>
+</tr>
+<tr>
+<td><code>re</code></td>
+<td>Regular expressions</td>
+</tr>
+<tr>
+<td><code>time</code></td>
+<td>Timing, sleep functions</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="Third-party-Modules-(via-pip-install)">Third-party Modules (via <code>pip install</code>)<a class="anchor-link" href="#Third-party-Modules-(via-pip-install)"></a></h3><div class="highlight"><pre><span></span>pip install requests
+</pre></div>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://api.github.com&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+</pre></div>
+<hr>
+<h3 id="Best-Practices">Best Practices<a class="anchor-link" href="#Best-Practices"></a></h3><ul>
+<li>Use aliases (<code>import numpy as np</code>) for readability.</li>
+<li>Keep reusable code in modules.</li>
+<li>Avoid wildcard imports (<code>from module import *</code>) in production.</li>
+<li>Group all imports at the top of the file.</li>
+</ul>
+<hr>
+<h3 id="Real-world-Use-Case">Real-world Use Case<a class="anchor-link" href="#Real-world-Use-Case"></a></h3><p><strong>Project: Weather App</strong></p>
+<ul>
+<li><code>main.py</code>: user interface</li>
+<li><code>weather.py</code>: handles API requests</li>
+<li><code>utils.py</code>: helper functions (formatting, error handling)</li>
+</ul>
+<p>All parts communicate via module imports.</p>
+<hr>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- Initialize MathJax after window loads -->
+    <script>
+        window.onload = function() {
+            init_mathjax();
+        };
+    </script>
+
+
+</body>
+
+
+
+
+
+
+
+</html>

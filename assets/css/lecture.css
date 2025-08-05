@@ -1,0 +1,38 @@
+
+    body {
+      padding: 1.5% 10% 5% 10%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    strong {
+      font-weight: bold;
+      color: #00a79f;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      color: aliceblue;
+      strong{
+        color: aliceblue;
+      }
+    }
