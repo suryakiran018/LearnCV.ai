@@ -56,8 +56,8 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 
 ## 📆 Daily Lecture Index
 
-- [Track Lecture progress and revisit key concepts anytime.](lectures/lectures.md)
-> 📌 **Note:** This file will be updated **daily** after each lecture.
+- [Track lecture progress and revisit key concepts anytime.](lectures/lectures.md)
+> 📌 **Note:** This section will be updated **daily** after each lecture.
 
 
 | 📅 Date      | 📦 Module | 🧠 Topic                         | 📁 Lecture Notes | 📚 Remarks                               |
@@ -66,6 +66,17 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 | Aug 01, 2025 | Module 0  | Github Basics | [Git & Github](../tools/git&github.md)  | Course Setup   |
 | Aug 05, 2025 | Module 0  | Mathematics for AI | [Mathematics_for_AI.html](templates/Mathematics_for_AI.html)  | Linear Algebra, Calculus   |
 | Aug 06, 2025 | Module 0  | Python Basics| [Python.html](templates/Python.html)  | Cheatsheets, Tutorial   |
+| ...          | ...       | ...                              | ...               | ...                                        |
+
+---
+
+## 🔬 **Lab Index**
+
+[***"Where theory meets practice – explore, implement, and innovate."***](lab/lab.md)
+
+| 📅 **Date**  | 📦 **Lab No.** | 🧠 **Lab Title**                     | 📚 **Topics Covered**                    | 🔗 **Link**     |
+| ------------ | -------------- | ------------------------------------ | ---------------------------------------- | --------------- |
+| Aug 06, 2025 | Practice Lab 1 | Low-Level System Design using Python | Functions, OOP, File Handling            | [practice-lab1.md](lab/practice-lab1.md) |
 | ...          | ...       | ...                              | ...               | ...                                        |
 
 ---

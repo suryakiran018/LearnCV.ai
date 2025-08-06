@@ -1,4 +1,5 @@
 .DS_Store
 lectures/notebooks
+# lectures/pdfs
 lectures/templates/Mathematics_for_AI.html
-Assignements/assignement_format.md
+Assignements/assignment_format.md
