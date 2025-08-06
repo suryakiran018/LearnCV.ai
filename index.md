@@ -22,8 +22,8 @@ Welcome to the [official course homepage](https://purus15987.github.io/LearnCV.a
 - 📅 Click below to view the complete teaching plan with topics, assignments, and teaching aids:
   - 👉 [**View Full Teaching Plan (Google Sheet)**](https://docs.google.com/spreadsheets/d/1hCIqkod6LDRs8pzpcXTUU6w7MhRJ8bcmY_QlECySOSU)
 
-- 🧰 [Installation & Tool Setup](resources.md)  
-- 📚 Reference Books, Research Papers, and Datasets coming soon...
+- 🧰 [Installation & Tool Setup](instructions.md)
+- 📚 Reference Books, Research Papers, and Datasets are added soon...
 
 
 ---
@@ -47,15 +47,34 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 > "Every pixel tells a story. Learn to see beyond the image — that's the essence of Computer Vision."
 
 - 📌 Follow the [**Course Instructions**](instructions.md) to begin your journey.
+- [Roadmap to Computer Vision Engineer](lectures/syllabus.md)
 - [Git & GitHub basics](tools/git&github.md) (hands-on, beginner-friendly)
-- [Mathematics for AI](lectures/Mathematics_for_AI.html) (Linear Algebra, Calculus)
-- [Python Basics](lectures/Python.html) (Cheatsheets, Tutorial)
+- [Mathematics for AI](lectures/templates/Mathematics_for_AI.html) (Linear Algebra, Calculus)
+- [Python Basics](lectures/templates/Python.html) (Cheatsheets, Tutorial)
 
 ---
 
-## 📆 Daily Progress – Lecture Log
+## 📆 Daily Lecture Index
 
-> Track your progress and revisit key concepts anytime.
+- [Track your progress and revisit key concepts anytime.](lectures/lectures.md)
+> 📌 **Note:** This file will be updated **daily** after each lecture.
+
+
+| 📅 Date      | 📦 Module | 🧠 Topic                         | 📁 Lecture Notes | 📚 Remarks                               |
+| ------------ | --------- | -------------------------------- | ----------------- | ------------------------------------------ |
+| June 31, 2025 | Intro  | Introduction to LearnCV.ai  | [LearnCV.ai](../index.md)  | Orientation   |
+| Aug 01, 2025 | Module 0  | Github Basics | [Git & Github](../tools/git&github.md)  | Course Setup   |
+| Aug 05, 2025 | Module 0  | Mathematics for AI | [Mathematics_for_AI.html](templates/Mathematics_for_AI.html)  | Linear Algebra, Calculus   |
+| Aug 06, 2025 | Module 0  | Python Basics| [Python.html](templates/Python.html)  | Cheatsheets, Tutorial   |
+| ...          | ...       | ...                              | ...               | ...                                        |
+
+---
+
+## AI Assistant Tutor
+
+> ⚠️ **Under Development**: A ChatGPT-like assistant that helps with doubts related course content.
+
+---
 
 ## 👨‍🏫 Instructor
 

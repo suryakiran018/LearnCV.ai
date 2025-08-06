@@ -3,7 +3,7 @@
 Welcome to the official lecture hub for the **Computer Vision Course (2025)**.
 Here, you'll find links to **daily lectures**, **slides**, **code notebooks**, and **recordings** (when available).
 
-> 📌 **Note:** This file will be updated **daily** after each lecture.
+> 📌 **Note:** This Section will be updated **daily** after each lecture.
 
 ---
 
@@ -20,4 +20,4 @@ Here, you'll find links to **daily lectures**, **slides**, **code notebooks**, a
 ---
 
 
-> 📌 **Note:** This file will be updated **daily** after each lecture.
+> 📌 **Note:** This Section will be updated **daily** after each lecture.
