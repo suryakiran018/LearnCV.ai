@@ -65,19 +65,19 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 | ------------ | --------- | -------------------------------- | ----------------- | ------------------------------------------ |
 | June 31, 2025 | Intro  | Introduction to LearnCV.ai  | [LearnCV.ai](../index.md)  | Orientation   |
 | Aug 01, 2025 | Module 0  | Github Basics | [Git & Github](../tools/git&github.md)  | Course Setup   |
-| Aug 05, 2025 | Module 0  | Mathematics for AI | [Mathematics_for_AI.html](templates/Mathematics_for_AI.html)  | Linear Algebra, Calculus   |
-| Aug 06, 2025 | Module 0  | Python Basics| [Python.html](templates/Python.html)  | Cheatsheets, Tutorial   |
+| Aug 05, 2025 | Module 0  | Mathematics for AI | [Mathematics_for_AI.html](lectures/templates/Mathematics_for_AI.html)  | Linear Algebra, Calculus   |
+| Aug 07, 2025 | Module 0  | Python Basics| [Python.html](lectures/templates/Python.html)  | Cheatsheets, Tutorial   |
 | ...          | ...       | ...                              | ...               | ...                                        |
 
 ---
 
 ## 🔬 **Lab Index**
 
-[***"Where theory meets practice – explore, implement, and innovate."***](lab/lab.md)
+- [Explore, Implement, and Innovate.](lab/lab.md)
 
 | 📅 **Date**  | 📦 **Lab No.** | 🧠 **Lab Title**                     | 📚 **Topics Covered**                    | 🔗 **Link**     |
 | ------------ | -------------- | ------------------------------------ | ---------------------------------------- | --------------- |
-| Aug 06, 2025 | Practice Lab 1 | Low-Level System Design using Python | Functions, OOP, File Handling            | [practice-lab1.md](lab/practice-lab1.md) |
+| Aug 07, 2025 | Practice Lab 1 | Low-Level System Design using Python | Functions, OOP, File Handling            | [practice-lab1.md](lab/practice-lab1.md) |
 | ...          | ...       | ...                              | ...               | ...                                        |
 
 ---
