@@ -27,6 +27,16 @@ Strengthen your numerical programming and model-design skills by building, testi
 
 ---
 
+---
+
+## [An Engineer’s Trek into Machine Learning](https://www.ml4devs.com/en/articles/machine-learning-intro-for-developers/)
+
+<img src="https://www.ml4devs.com/images/illustrations/ml-intro-types-of-models.webp" alt="ML-models"/>
+
+[source](https://www.ml4devs.com)
+
+---
+
 ## 🛠️ Lab Instructions for Students
 
 1. **Select one problem** from the list and read requirements carefully.
@@ -90,10 +100,6 @@ Strengthen your numerical programming and model-design skills by building, testi
 
 ---
 
-Here’s a **resources & acknowledgements** section that matches the style of your original Low-Level Design lab, adapted for the **NumPy & ML Model Design** context:
-
----
-
 ## 🙏 **Credits / Acknowledgements**
 
 We acknowledge the use of open-source educational content and inspiration from the following sources:
@@ -103,6 +109,7 @@ We acknowledge the use of open-source educational content and inspiration from t
 * **Matplotlib Documentation** – [https://matplotlib.org/stable/contents.html](https://matplotlib.org/stable/contents.html)
 * **Python Data Science Handbook** by Jake VanderPlas (O’Reilly, open-access version available online)
 * **scikit-learn Documentation** – [https://scikit-learn.org/](https://scikit-learn.org/)
+* **An Engineer’s Trek into Machine Learning** – [www.ml4devs.com](https://www.ml4devs.com/en/articles/machine-learning-intro-for-developers/)
 * **CS231n: Convolutional Neural Networks for Visual Recognition** – [http://cs231n.stanford.edu/](http://cs231n.stanford.edu/)
 * **Dive into Deep Learning (D2L.ai)** – [https://d2l.ai/](https://d2l.ai/)
 * **Machine Learning Mastery – Code Algorithm from Scratch** – [https://machinelearningmastery.com/](https://machinelearningmastery.com/start-here/#code_algorithms)
