@@ -1,31 +1,59 @@
-# Practice Lab - 2: NumPy & ML Model Design (Hands-On)
+# 🧪 Practice Lab – 2: NumPy & ML Model Design
 
-## 🎯 Objective
+## 🎯 **Objective:**
+Practice building and testing basic machine learning algorithms **from scratch** using only **NumPy** (no TensorFlow/PyTorch for model internals). Also practice clean coding with **OOP** (Object-Oriented Programming).
 
-Strengthen your numerical programming and model-design skills by building, testing, and documenting core algorithms and small ML models using **NumPy** (no high-level libraries for core algorithms) and clean OOP where appropriate.
+---
+
+## 💻 Lab Problems (Choose one)
+
+### **Easy Level**
+
+1. **Linear Regression** – do both:
+
+   * Closed-form solution (normal equation)
+   * Gradient Descent (add Ridge regularization)
+2. **Data Split & Evaluation** – create functions to:
+
+   * Split data into train/validation/test sets
+   * Apply scaling
+   * Calculate metrics (MSE, MAE, R²)
 
 ---
 
-## 💻 Lab Problems (Choose **one**)
+### **Medium Level**
 
-### Easy
+1. **Logistic Regression (Binary)**:
 
-* **Linear Regression (closed-form + gradient descent)** from scratch using NumPy. Include regularization (Ridge).
-* **Train/test split + evaluation pipeline**: scalers, train/val/test split, and metric functions (MSE, MAE, R²).
+   * L2 regularization
+   * Stable math using log-sum-exp
+   * SGD or mini-batch gradient descent
+2. **K-Nearest Neighbours (KNN)**:
 
-### Medium
+   * Different distance metrics
+   * Weighted voting
+3. **Small Feed-Forward Neural Network**:
 
-* Implement **Logistic Regression** (binary) with L2 regularization, numerical stability (log-sum-exp), and SGD / mini-batch.
-* **K-Nearest Neighbours** (KD-tree optional) with distance metrics and weighted voting.
-* Build a small **feed-forward neural network** (1-3 hidden layers) with ReLU/sigmoid/tanh, forward/backward passes, and options for batch normalization.
-
-### Hard
-
-* Implement **CNN primitives** (conv2d, maxpool) and train a small CNN on a subset of MNIST (vectorized, no deep-learning frameworks).
-* Build a **simple autoencoder** for dimensionality reduction and demonstrate reconstruction quality/latent interpolation.
-* Implement and compare **optimization algorithms**: SGD, SGD+Momentum, RMSProp, Adam — show convergence plots and analysis.
+   * 1–3 hidden layers
+   * Activation functions (ReLU, Sigmoid, Tanh)
+   * Batch normalization option
 
 ---
+
+### **Hard Level**
+
+1. **CNN Basics**:
+
+   * Implement conv2d and maxpool functions
+   * Train a small CNN on part of MNIST
+2. **Simple Autoencoder**:
+
+   * Reduce dimensions
+   * Show reconstruction quality
+3. **Optimization Algorithms**:
+
+   * Implement and compare: SGD, Momentum, RMSProp, Adam
+   * Show and analyze convergence plots
 
 ---
 
@@ -37,66 +65,81 @@ Strengthen your numerical programming and model-design skills by building, testi
 
 ---
 
-## 🛠️ Lab Instructions for Students
+## 🛠️ Lab Instructions
 
-1. **Select one problem** from the list and read requirements carefully.
-2. Design components before coding. Provide a **class diagram / flow diagram** showing modules (e.g., DataLoader, Model, Optimizer, Trainer, Metrics).
-3. Write code in **Python + NumPy**. You may use matplotlib for plots and scikit-learn only for dataset loading/benchmarking (not for model internals).
-4. Keep code **vectorized** — avoid Python loops over samples whenever possible.
-5. Include a **unit test file** that checks core routines (shapes, gradients via numerical check, loss decreases on toy data).
-6. Provide a **short report (PDF)**: problem statement, design decisions, key algorithms, experiments, plots (loss/accuracy), and conclusions.
-7. Submit repository or ZIP containing code, tests, and report.
+1. **Pick one** problem from above.
+2. Plan your code before starting — draw a small diagram of your components:
 
----
+   * Example: DataLoader → Model → Optimizer → Trainer → Metrics
+3. Write **Python + NumPy** code (vectorized, avoid loops over each sample).
+4. You can use `matplotlib` for plots, and `scikit-learn` only for:
 
-## Example: Linear Regression Lab (compact blueprint)
+   * Loading datasets
+   * Checking results (not for internal model work)
+5. Create **unit tests** to check:
 
-* **Design (UML-like)**:
+   * Correct shapes
+   * Gradients (numeric check)
+   * Loss decreases during training
+6. Write a **short report** (2–4 pages, PDF):
 
-  * `DataLoader` → loads CSV or sklearn dataset
-  * `LinearModel` (implements `predict`, `loss`, `grad`)
-  * `Optimizer` (`SGD` with learning rate)
-  * `Trainer` (loop, early stopping)
-* **Deliverables**:
-
-  * `linear_model.py`, `optimizer.py`, `trainer.py`, `tests/`
-  * Report with comparison: closed-form vs gradient descent; effect of learning rate and regularization.
-* **Tests**:
-
-  * Shapes check, loss decreases over epochs, gradient numeric check < 1e-5.
+   * Problem statement
+   * Design choices
+   * Algorithms used
+   * Experiments + plots
+   * Key results and conclusions
+7. Submit your **code + tests + report** in a ZIP or GitHub repo.
 
 ---
 
-## Example: Small Feed-Forward NN (tips)
+## 📂 Suggested Project Structure
 
-* Implement layers as classes (`Linear`, `ReLU`, `Sigmoid`) with `forward(X)` and `backward(dout)` returning gradients.
-* Keep layer parameters in a dict for easy saving/loading.
-* Use **Cross-Entropy** with stable softmax.
-* Train on a small portion of MNIST or a toy dataset — show learning curves and confusion matrix.
+```
+README.md          # Instructions to run
+dataset/           # dataset files (.csv / .png / .xsl)
+results/           # experimentation results 
+src/               # Code files
+  |_model.py
+  |_train.py
+  |_utils.py
+  |_dataloader.py
+  |_main.py
+  |_eval.py
+  |_test.py
+tests/             # Unit tests
+report.pdf         # Your short write-up
+```
 
 ---
 
-## Suggested Deliverable Template (for students)
+## 📊 Example: Linear Regression
 
-* `README.md` with run instructions
-* `src/` with code modules
-* `tests/` with unit tests (use pytest)
-* `notebooks/` optional exploratory notebook
-* `report.pdf` (2-4 pages): problem, design, results, discussion
+**Components:**
+
+* DataLoader → loads dataset
+* LinearModel → predict, loss, gradient
+* Optimizer → SGD with learning rate
+* Trainer → training loop, early stopping
+
+**Tests:**
+
+* Shapes match
+* Loss decreases each epoch
+* Gradient error < 1e-5
 
 ---
 
-## ✅ Evaluation Rubric (Total 35)
+## 🏆 Marks Distribution (Total 35)
 
-| Criteria                         | Marks  |
-| -------------------------------- | ------ |
-| Problem Understanding & Scope    | 5      |
-| Code Correctness & Vectorization | 10     |
-| Modular Design & OOP Use         | 7      |
-| Experiments & Plots (analysis)   | 6      |
-| Tests / Reproducibility          | 4      |
-| Presentation (report clarity)    | 3      |
-| **Total**                        | **35** |
+| Criteria                 | Marks  |
+| ------------------------ | ------ |
+| Understanding problem    | 5      |
+| Correct, vectorized code | 10     |
+| Modular design, OOP      | 7      |
+| Experiments & analysis   | 6      |
+| Tests & reproducibility  | 4      |
+| Report clarity           | 3      |
+| **Total**                | **35** |
 
 ---
 
