@@ -15,6 +15,7 @@ Here, you'll find links to **daily lectures**, **slides**, **code notebooks**, a
 | Aug 01, 2025 | Module 0  | Github Basics | [Git & Github](../tools/git&github.md)  | Course Setup   |
 | Aug 05, 2025 | Module 0  | Mathematics for AI | [Mathematics_for_AI.html](templates/Mathematics_for_AI.html)  | Linear Algebra, Calculus   |
 | Aug 06, 2025 | Module 0  | Python Basics| [Python.html](templates/Python.html)  | Cheatsheets, Tutorial   |
+| Aug 11, 2025 | Module 0  | Numpy Basics| [Numpy.md](../tools/numpy.md)  |  Arrays & Operations, math, linear-algerbra, probability & statistics  |
 | ...          | ...       | ...                              | ...               | ...                                        |
 
 ---
