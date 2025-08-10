@@ -49,8 +49,8 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 - 📌 Follow the [**Course Instructions**](instructions.md) to begin your journey.
 - [Roadmap to Computer Vision Engineer](lectures/syllabus.md)
 - [Git & GitHub basics](tools/git&github.md) (hands-on, beginner-friendly)
-- [Mathematics for AI](lectures/templates/Mathematics_for_AI.html) (Linear Algebra, Calculus)
-- [Python Basics](lectures/templates/Python.html) (Cheatsheets, Tutorial)
+- [Mathematics for AI](lectures/notebooks/Mathematics_for_AI.ipynb) (Linear Algebra, Calculus)
+- [Python Basics](lectures/notebooks/Python.ipynb) (Cheatsheets, Tutorial)
 
 ---
 
@@ -64,8 +64,8 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 | ------------ | --------- | -------------------------------- | ----------------- | ------------------------------------------ |
 | June 31, 2025 | Intro  | Introduction to LearnCV.ai  | [LearnCV.ai](../index.md)  | Orientation   |
 | Aug 01, 2025 | Module 0  | Github Basics | [Git & Github](../tools/git&github.md)  | Course Setup   |
-| Aug 05, 2025 | Module 0  | Mathematics for AI | [Mathematics_for_AI.html](lectures/templates/Mathematics_for_AI.html)  | Linear Algebra, Calculus   |
-| Aug 07, 2025 | Module 0  | Python Basics| [Python.html](lectures/templates/Python.html)  | Cheatsheets, Tutorial   |
+| Aug 05, 2025 | Module 0  | Mathematics for AI | [Mathematics_for_AI.html](lectures/notebooks/Mathematics_for_AI.ipynb)  | Linear Algebra, Calculus   |
+| Aug 07, 2025 | Module 0  | Python Basics| [Python.html](lectures/notebooks/Python.ipynb)  | Cheatsheets, Tutorial   |
 | Aug 11, 2025 | Module 0  | Numpy Basics| [Numpy.md](tools/numpy.md)  |  Arrays & Operations, math, linear-algerbra, probability & statistics  |
 | ...          | ...       | ...                              | ...               | ...                                        |
 
