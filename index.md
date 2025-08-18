@@ -63,11 +63,14 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 
 | 📅 Date      | 📦 Module | 🧠 Topic                         | 📁 Lecture Notes | 📚 Remarks                               |
 | ------------ | --------- | -------------------------------- | ----------------- | ------------------------------------------ |
-| June 31, 2025 | Intro  | Introduction to LearnCV.ai  | [LearnCV.ai](../index.md)  | Orientation   |
-| Aug 01, 2025 | Module 0  | Github Basics | [Git & Github](../tools/git&github.md)  | Course Setup   |
+| June 31, 2025 | Intro  | Introduction to LearnCV.ai  | [LearnCV.ai](index.md)  | Orientation   |
+| Aug 01, 2025 | Module 0  | Github Basics | [Git & Github](tools/git&github.md)  | Course Setup   |
 | Aug 05, 2025 | Module 0  | Mathematics for AI | [Mathematics_for_AI.html](lectures/templates/Mathematics_for_AI.html)  | Linear Algebra, Calculus   |
-| Aug 07, 2025 | Module 0  | Python Basics| [Python.html](lectures/templates/Python.html)  | Cheatsheets, Tutorial   |
-| Aug 11, 2025 | Module 0  | Numpy Basics| [Numpy.md](tools/numpy.md)  |  Arrays & Operations, math, linear-algerbra, probability & statistics  |
+| Aug 07, 2025 | Module 0  | Python Basics | [Python.html](lectures/templates/Python.html)  | Cheatsheets, Tutorial   |
+| Aug 11, 2025 | Module 0  | Numpy Basics | [numpy.md](tools/numpy.md)  | Arrays & Operations, math, linear-algerbra, probability & statistics  |
+| Aug 18, 2025 | Module 0  | Scipy Basics | [scipy.md](tools/scipy.md)  | advanced mathematical operations, data analysis, and scientific applications  |
+| Aug 19, 2025 | Module 0  | Matplotlib Basics | [matplotlib.md](tools/matplotlib.md)  | 2D and 3D plots, charts, and visualizations  |
+| Aug 20, 2025 | Module 0  | OpenCV Basics | [OpenCV.md](lectures/templates/OpenCV.md), [OpenCV.ipynb](https://github.com/purus15987/LearnCV.ai/tree/main/lectures/notebooks)  | Image processing, Video analysis  |
 | ...          | ...       | ...                              | ...               | ...                                        |
 
 ---
@@ -84,11 +87,23 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 
 ---
 
-## 👨‍🏫 Instructor
+## 🌍 FAQs (Frequently Asked Questions)
 
-**Purushotham Mailapalli**  
-Assistant Professor, JBIET College, Hyderabad  
-📎 [GitHub](https://github.com/purus15987) | [LinkedIn](https://www.linkedin.com/in/purushotham-mailapalli-0207471b3)
+Whether you are just starting out, curious about the field, or looking for guidance on careers, skills, or resources—this is the place to begin.
+
+👉 [Click here to view](https://github.com/purus15987/LearnCV.ai/discussions/8): Fresher FAQs on Computer Vision
+
+---
+
+## 👨‍🏫 Instructors
+
+  **Purushotham Mailapalli**  \
+  Assistant Professor (M.Tech), JBIET College, Hyderabad  \
+  📎 [GitHub](https://github.com/purus15987) | [LinkedIn](https://www.linkedin.com/in/purus15987)
+
+  **UmmeHaniSara** \
+  Assistant Professor (pursuing PhD), JBIET College, Hyderabad \
+  📎 [GitHub](https://github.com/UmmeHaniSara) | [ummehanisara@gmail.com](emailto:ummehanisara@gmail.com)
 
 ---
 

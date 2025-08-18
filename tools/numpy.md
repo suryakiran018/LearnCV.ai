@@ -1,7 +1,9 @@
+# Numpy Guide
+
 ## 1. Introduction to NumPy
 
 ### What is NumPy?
-NumPy (**Numerical Python**) is a library for working with arrays and performing mathematical operations efficiently. 
+NumPy (**Numerical Python**) is a python library for working with arrays and performing mathematical operations efficiently. 
 
 - It provides support for multi-dimensional arrays, along with a collection of functions for **linear algebra, statistics, and more**.
 
