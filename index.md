@@ -65,6 +65,7 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 | ------------ | --------- | -------------------------------- | ----------------- | ------------------------------------------ |
 | June 31, 2025 | Intro  | Introduction to LearnCV.ai  | [LearnCV.ai](index.md)  | Orientation   |
 | Aug 01, 2025 | Module 0  | Github Basics | [Git & Github](tools/git&github.md)  | Course Setup   |
+| Aug 02, 2025 | Module 0  | Python Requests, BeautifulSoup, Selenium | [Web Scraping Tutorial](tools/Web_Scraping_Tutorial.md)  | Data Collection  |
 | Aug 05, 2025 | Module 0  | Mathematics for AI | [Mathematics_for_AI.html](lectures/templates/Mathematics_for_AI.html)  | Linear Algebra, Calculus   |
 | Aug 07, 2025 | Module 0  | Python Basics | [Python.html](lectures/templates/Python.html)  | Cheatsheets, Tutorial   |
 | Aug 11, 2025 | Module 0  | Numpy Basics | [numpy.md](tools/numpy.md)  | Arrays & Operations, math, linear-algerbra, probability & statistics  |
@@ -83,6 +84,7 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 | ------------ | -------------- | ------------------------------------ | ---------------------------------------- | --------------- |
 | Aug 07, 2025 | Practice Lab 1 | Low-Level System Design using Python | Functions, OOP, File Handling            | [practice-lab1.md](lab/practice-lab1.md) |
 | Aug 11, 2025 | Practice Lab 2 | NumPy & ML Model Design | OOPS, DataLoader.py, Model.py, Optimizer (SGD), Train.py, Test.py, /Results          | [practice-lab2.md](lab/practice-lab2.md) |
+| Aug 18, 2025 | Practice Lab 3 | Real-time Data Processing & Visualization | SciPy, Matplotlib, Flask, Web Scraping          | [practice-lab3.md](lab/practice-lab3.md) |
 | ...          | ...       | ...                              | ...               | ...                                        |
 
 ---
