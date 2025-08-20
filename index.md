@@ -51,6 +51,7 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 - [Git & GitHub basics](tools/git&github.md) (hands-on, beginner-friendly)
 - [Mathematics for AI](lectures/templates/Mathematics_for_AI.html) (Linear Algebra, Calculus)
 - [Python Basics](lectures/templates/Python.html) (Cheatsheets, Tutorial)
+- [Web-Development-Basics](tools/Web-Development-Basics.md): [HTML.md](tools/HTML.md), [CSS.md](tools/CSS.md), [JavaScript.md](tools/JavaScript.md), [Flask.md](tools/Flask.md)
 
 ---
 
@@ -65,13 +66,13 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 | ------------ | --------- | -------------------------------- | ----------------- | ------------------------------------------ |
 | June 31, 2025 | Intro  | Introduction to LearnCV.ai  | [LearnCV.ai](index.md)  | Orientation   |
 | Aug 01, 2025 | Module 0  | Github Basics | [Git & Github](tools/git&github.md)  | Course Setup   |
-| Aug 02, 2025 | Module 0  | Python Requests, BeautifulSoup, Selenium | [Web Scraping Tutorial](tools/Web_Scraping_Tutorial.md)  | Data Collection  |
+| Aug 02, 2025 | Module 0  | Python Requests, BeautifulSoup, Selenium | [Web Scraping Tutorial](https://github.com/purus15987/LearnCV.ai/tree/main/tools/Web_Scraping_Tutorial.ipynb)  | Data Collection  |
 | Aug 05, 2025 | Module 0  | Mathematics for AI | [Mathematics_for_AI.html](lectures/templates/Mathematics_for_AI.html)  | Linear Algebra, Calculus   |
 | Aug 07, 2025 | Module 0  | Python Basics | [Python.html](lectures/templates/Python.html)  | Cheatsheets, Tutorial   |
 | Aug 11, 2025 | Module 0  | Numpy Basics | [numpy.md](tools/numpy.md)  | Arrays & Operations, math, linear-algerbra, probability & statistics  |
-| Aug 18, 2025 | Module 0  | Scipy Basics | [scipy.md](tools/scipy.md)  | advanced mathematical operations, data analysis, and scientific applications  |
 | Aug 19, 2025 | Module 0  | Matplotlib Basics | [matplotlib.md](tools/matplotlib.md)  | 2D and 3D plots, charts, and visualizations  |
-| Aug 20, 2025 | Module 0  | OpenCV Basics | [OpenCV.md](lectures/templates/OpenCV.md), [OpenCV.ipynb](https://github.com/purus15987/LearnCV.ai/tree/main/lectures/notebooks)  | Image processing, Video analysis  |
+| Aug 20, 2025 | Module 0  | Scipy Basics | [scipy.md](tools/scipy.md)  | advanced mathematical operations, data analysis, and scientific applications  |
+| Aug 21, 2025 | Module 0  | OpenCV Basics | [OpenCV.md](lectures/templates/OpenCV.md), [OpenCV.ipynb](https://github.com/purus15987/LearnCV.ai/tree/main/lectures/notebooks)  | Image processing, Video analysis  |
 | ...          | ...       | ...                              | ...               | ...                                        |
 
 ---
