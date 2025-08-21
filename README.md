@@ -52,6 +52,12 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 - [Mathematics for AI](lectures/notebooks/Mathematics_for_AI.ipynb) (Linear Algebra, Calculus)
 - [Python Basics](lectures/notebooks/Python.ipynb) (Cheatsheets, Tutorial)
 - [Web-Development-Basics](tools/Web-Development-Basics.md): [HTML.md](tools/HTML.md), [CSS.md](tools/CSS.md), [JavaScript.md](tools/JavaScript.md), [Flask.md](tools/Flask.md)
+- [Data-Science-Basics](tools/Data-Science-Basics.md): 
+  - Data Preparation: [SQL](tools/SQL.md)
+  - Data Preprocessing & Analysis: [Pandas](tools/Pandas.md), [Numpy](tools/numpy.md), [Scikit-learn](tools/scikit-learn.md)
+  - Mathematics : [Probability & Statistics](tools/probabilty-stastistics.md), [Scipy](tools/scipy.md)
+  - Data Visualisation: [Matplotlib](tools/matplotlib.md), [Seaborn](tools/seaborn.md)
+  - User Interface: [Tkinter - GUI](tools/Tkinter.md), [Streamlit](tools/streamlit.md)
 
 ---
 
@@ -84,7 +90,7 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 | ------------ | -------------- | ------------------------------------ | ---------------------------------------- | --------------- |
 | Aug 07, 2025 | Practice Lab 1 | Low-Level System Design using Python | Functions, OOP, File Handling            | [practice-lab1.md](lab/practice-lab1.md) |
 | Aug 11, 2025 | Practice Lab 2 | NumPy & ML Model Design | OOPS, DataLoader.py, Model.py, Optimizer (SGD), Train.py, Test.py, /Results          | [practice-lab2.md](lab/practice-lab2.md) |
-| Aug 18, 2025 | Practice Lab 3 | Real-time Data Processing & Visualization | SciPy, Matplotlib, Flask, Web Scraping          | [practice-lab3.md](lab/practice-lab3.md) |
+| Aug 18, 2025 | Practice Lab 3 | Real-time Data Processing, Analysis & Visualization | SQL, Pandas, NumPy, SciPy, Scikit-learn, Matplotlib, Seaborn, Tkinter/Streamlit | [practice-lab3.md](lab/practice-lab3.md) |
 | ...          | ...       | ...                              | ...               | ...                                        |
 
 ---

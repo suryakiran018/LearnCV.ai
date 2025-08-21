@@ -1,163 +1,119 @@
-# Numpy Guide
+# NumPy Guide
 
 ## 1. Introduction to NumPy
 
 ### What is NumPy?
-NumPy (**Numerical Python**) is a python library for working with arrays and performing mathematical operations efficiently. 
+NumPy (Numerical Python) is a Python library for working with multi-dimensional arrays and matrices. It provides fast, vectorized operations and a wide range of mathematical functions, making it essential for numerical and scientific computing.
 
-- It provides support for multi-dimensional arrays, along with a collection of functions for **linear algebra, statistics, and more**.
+### Why Use NumPy?
+- **Performance**: Arrays are stored in contiguous memory, enabling faster computations than Python lists.
+- **Functionality**: Supports linear algebra, random number generation, and more.
+- **Integration**: Works seamlessly with Pandas, SciPy, Matplotlib, and Scikit-Learn.
 
-### Installation
-Install NumPy using pip:
+### Installing NumPy
+Install using pip:
 ```bash
 pip install numpy
 ```
 
-Import NumPy in Python:
+### Importing NumPy
 ```python
 import numpy as np
 ```
 
 ---
 
-## 2. NumPy Arrays
+## 2. Core Data Structure: NumPy Arrays
 
 ### Creating Arrays
-NumPy's core object is the `ndarray`. Create arrays using various methods:
-```python
-# From a list
-arr = np.array([1, 2, 3, 4])
-print(arr)  # Output: [1 2 3 4]
+NumPy’s primary data structure is the `ndarray` (n-dimensional array).
 
-# 2D array
-arr_2d = np.array([[1, 2], [3, 4]])
-print(arr_2d)
-# Output:
-# [[1 2]
-#  [3 4]]
+- **From Lists**:
+  ```python
+  arr = np.array([1, 2, 3])
+  print(arr)  # Output: [1 2 3]
+  ```
 
-# Zeros, ones, or empty arrays
-zeros = np.zeros((2, 3))  # 2x3 array of zeros
-ones = np.ones((2, 3))    # 2x3 array of ones
-empty = np.empty((2, 3))  # 2x3 uninitialized array
+- **Multi-Dimensional Arrays**:
+  ```python
+  arr_2d = np.array([[1, 2], [3, 4]])
+  print(arr_2d)
+  # Output:
+  # [[1 2]
+  #  [3 4]]
+  ```
 
-# Range of values
-arange = np.arange(0, 10, 2)  # Output: [0 2 4 6 8]
-linspace = np.linspace(0, 1, 5)  # Output: [0.   0.25 0.5  0.75 1.  ]
-```
+- **Special Arrays**:
+  ```python
+  zeros = np.zeros((2, 3))  # 2x3 array of zeros
+  ones = np.ones((2, 3))   # 2x3 array of ones
+  eye = np.eye(3)          # 3x3 identity matrix
+  arange = np.arange(0, 10, 2)  # Array: [0, 2, 4, 6, 8]
+  linspace = np.linspace(0, 1, 5)  # Array: [0. 0.25 0.5 0.75 1.]
+  ```
 
 ### Array Attributes
-Inspect array properties:
-```python
-arr = np.array([[1, 2, 3], [4, 5, 6]])
-print(arr.shape)    # Output: (2, 3)
-print(arr.ndim)     # Output: 2
-print(arr.size)     # Output: 6
-print(arr.dtype)    # Output: int64
-```
+- **Shape**: Dimensions of the array.
+  ```python
+  print(arr_2d.shape)  # Output: (2, 2)
+  ```
+- **Data Type**: Type of elements.
+  ```python
+  print(arr.dtype)  # Output: int64 (or similar)
+  ```
+- **Size**: Total number of elements.
+  ```python
+  print(arr_2d.size)  # Output: 4
+  ```
 
 ---
 
-## 3. Array Indexing and Slicing
+## 3. Essential Array Operations
 
-### Indexing
-Access elements using indices:
-```python
-arr = np.array([10, 20, 30, 40])
-print(arr[0])  # Output: 10
-
-arr_2d = np.array([[1, 2, 3], [4, 5, 6]])
-print(arr_2d[1, 2])  # Output: 6
-```
-
-### Slicing
-Extract subarrays:
-```python
-arr = np.array([10, 20, 30, 40, 50])
-print(arr[1:4])  # Output: [20 30 40]
-
-arr_2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-print(arr_2d[0:2, 1:3])
-# Output:
-# [[2 3]
-#  [5 6]]
-```
-
-### Boolean Indexing
-Filter arrays based on conditions:
-```python
-arr = np.array([1, 2, 3, 4, 5])
-print(arr[arr > 3])  # Output: [4 5]
-```
-
----
-
-## 4. Array Operations
-
-### Element-wise Operations
+### Element-Wise Operations
 Perform operations on each element:
 ```python
 arr = np.array([1, 2, 3])
-print(arr + 2)      # Output: [3 4 5]
-print(arr * 2)      # Output: [2 4 6]
-print(np.sqrt(arr)) # Output: [1.         1.41421356 1.73205081]
+print(arr + 2)  # Output: [3 4 5]
+print(arr * 2)  # Output: [2 4 6]
+print(np.sqrt(arr))  # Output: [1. 1.41421356 1.73205081]
 ```
 
 ### Broadcasting
 Apply operations across arrays of different shapes:
 ```python
-arr = np.array([[1, 2], [3, 4]])
-scalar = 10
-print(arr + scalar)
+arr_2d = np.array([[1, 2], [3, 4]])
+scalar = 2
+print(arr_2d * scalar)
 # Output:
-# [[11 12]
-#  [13 14]]
+# [[2 4]
+#  [6 8]]
 ```
 
-### Matrix Operations
-Perform matrix multiplication and other operations:
-```python
-a = np.array([[1, 2], [3, 4]])
-b = np.array([[5, 6], [7, 8]])
-print(np.dot(a, b))  # Matrix multiplication
-# Output:
-# [[19 22]
-#  [43 50]]
+### Indexing and Slicing
+- **Basic Indexing**:
+  ```python
+  print(arr[1])  # Output: 2
+  print(arr_2d[0, 1])  # Output: 2
+  ```
+- **Slicing**:
+  ```python
+  print(arr[1:3])  # Output: [2 3]
+  print(arr_2d[:, 1])  # Output: [2 4]
+  ```
 
-print(a.T)  # Transpose
-# Output:
-# [[1 3]
-#  [2 4]]
+### Boolean Indexing
+Filter arrays based on conditions:
+```python
+print(arr[arr > 1])  # Output: [2 3]
 ```
 
 ---
 
-## 5. Mathematical and Statistical Functions
-
-### Universal Functions (ufuncs)
-Apply mathematical functions element-wise:
-```python
-arr = np.array([0, np.pi/2, np.pi])
-print(np.sin(arr))  # Output: [0. 1. 0.]
-```
-
-### Statistical Functions
-Compute statistics:
-```python
-arr = np.array([1, 2, 3, 4, 5])
-print(np.mean(arr))   # Output: 3.0
-print(np.std(arr))    # Output: 1.4142135623730951
-print(np.min(arr))    # Output: 1
-print(np.max(arr))    # Output: 5
-print(np.sum(arr))    # Output: 15
-```
-
----
-
-## 6. Reshaping and Manipulating Arrays
+## 4. Array Manipulation
 
 ### Reshaping
-Change the shape of an array:
+Change array shape:
 ```python
 arr = np.array([1, 2, 3, 4, 5, 6])
 reshaped = arr.reshape(2, 3)
@@ -168,213 +124,295 @@ print(reshaped)
 ```
 
 ### Flattening
-Convert multi-dimensional arrays to 1D:
+Convert to 1D array:
 ```python
-arr_2d = np.array([[1, 2], [3, 4]])
-flattened = arr_2d.flatten()
-print(flattened)  # Output: [1 2 3 4]
+flat = reshaped.flatten()
+print(flat)  # Output: [1 2 3 4 5 6]
 ```
 
-### Concatenation
-Combine arrays:
+### Concatenation and Stacking
+- **Concatenate**:
+  ```python
+  arr1 = np.array([1, 2])
+  arr2 = np.array([3, 4])
+  concat = np.concatenate((arr1, arr2))
+  print(concat)  # Output: [1 2 3 4]
+  ```
+- **Stack (Vertical/Horizontal)**:
+  ```python
+  arr1 = np.array([[1, 2], [3, 4]])
+  arr2 = np.array([[5, 6], [7, 8]])
+  vstack = np.vstack((arr1, arr2))  # Vertical stack
+  hstack = np.hstack((arr1, arr2))  # Horizontal stack
+  ```
+
+### Splitting
+Split arrays:
 ```python
-a = np.array([[1, 2], [3, 4]])
-b = np.array([[5, 6], [7, 8]])
-print(np.concatenate((a, b), axis=0))  # Vertical stacking
-# Output:
-# [[1 2]
-#  [3 4]
-#  [5 6]
-#  [7 8]]
+arr = np.array([1, 2, 3, 4, 5, 6])
+split = np.split(arr, 3)
+print(split)  # Output: [array([1, 2]), array([3, 4]), array([5, 6])]
 ```
 
 ---
 
-## 7. Advanced NumPy Features
+## 5. Mathematical and Statistical Functions
 
-### Random Number Generation
-Generate random numbers:
+### Basic Operations
 ```python
-# Random integers
-rand_ints = np.random.randint(1, 10, size=(2, 3))
-print(rand_ints)
-# Example Output:
-# [[4 7 2]
-#  [9 1 5]]
-
-# Random floats
-rand_floats = np.random.random((2, 3))
-print(rand_floats)
-# Example Output:
-# [[0.12345678 0.87654321 0.45678912]
-#  [0.78912345 0.23456789 0.67890123]]
+arr = np.array([1, 2, 3])
+print(np.sum(arr))  # Output: 6
+print(np.mean(arr))  # Output: 2.0
+print(np.std(arr))  # Output: 0.816496580927726
+print(np.min(arr), np.max(arr))  # Output: 1 3
 ```
 
 ### Linear Algebra
-Solve linear equations, compute eigenvalues, etc.:
-```python
-a = np.array([[1, 2], [3, 4]])
-b = np.array([5, 6])
-solution = np.linalg.solve(a, b)  # Solve ax = b
-print(solution)  # Output: [-4.   4.5]
-```
+- **Dot Product**:
+  ```python
+  arr1 = np.array([1, 2])
+  arr2 = np.array([3, 4])
+  print(np.dot(arr1, arr2))  # Output: 11 (1*3 + 2*4)
+  ```
+- **Matrix Multiplication**:
+  ```python
+  mat1 = np.array([[1, 2], [3, 4]])
+  mat2 = np.array([[5, 6], [7, 8]])
+  print(np.matmul(mat1, mat2))
+  # Output:
+  # [[19 22]
+  #  [43 50]]
+  ```
+- **Inverse**:
+  ```python
+  print(np.linalg.inv(mat1))
+  ```
 
-### Saving and Loading Arrays
-Save arrays to disk and load them:
+### Random Number Generation
+Generate random data:
 ```python
-arr = np.array([1, 2, 3])
-np.save('array.npy', arr)
-loaded_arr = np.load('array.npy')
-print(loaded_arr)  # Output: [1 2 3]
+np.random.seed(42)  # For reproducibility
+random_arr = np.random.rand(2, 3)  # 2x3 array of random floats (0 to 1)
+print(random_arr)
+randint = np.random.randint(0, 10, 5)  # 5 random integers
+print(randint)  # Output: [6 3 7 4 6]
 ```
 
 ---
 
-## 8. Performance Tips
+## 6. Advanced NumPy Features
 
-### Vectorization
-Use NumPy's vectorized operations instead of loops:
+### Fancy Indexing
+Use arrays as indices:
 ```python
-# Slow: Using a loop
-arr = np.array([1, 2, 3, 4])
-result = np.zeros(4)
-for i in range(len(arr)):
-    result[i] = arr[i] * 2
+arr = np.array([10, 20, 30, 40])
+indices = [0, 2]
+print(arr[indices])  # Output: [10 30]
+```
 
-# Fast: Vectorized
+### Masked Arrays
+Handle missing or invalid data:
+```python
+import numpy.ma as ma
+arr = np.array([1, -1, 3, -999])
+masked_arr = ma.masked_array(arr, mask=[0, 0, 0, 1])  # Mask -999
+print(masked_arr)  # Output: [1 -1 3 --]
+```
+
+### Broadcasting Rules
+Operate on arrays of different shapes if compatible:
+```python
+arr = np.array([[1, 2], [3, 4]])
+row = np.array([10, 20])
+print(arr + row)  # Adds row to each row of arr
+# Output:
+# [[11 22]
+#  [13 24]]
+```
+
+### Saving and Loading
+- **Save**:
+  ```python
+  np.save('array.npy', arr)
+  ```
+- **Load**:
+  ```python
+  loaded_arr = np.load('array.npy')
+  ```
+
+---
+
+## 7. Useful NumPy Methods
+
+### Array Creation
+- `np.full((2, 3), 5)`: Create array filled with a specific value.
+- `np.random.choice([1, 2, 3], size=5)`: Random sampling.
+- `np.diag([1, 2, 3])`: Diagonal matrix.
+
+### Array Manipulation
+- `np.ravel(arr)`: Flatten array (similar to `flatten` but may return a view).
+- `np.transpose(arr)` or `arr.T`: Transpose array.
+- `np.expand_dims(arr, axis=0)`: Add dimension.
+- `np.squeeze(arr)`: Remove single-dimensional entries.
+
+### Mathematical Functions
+- `np.where(arr > 2, arr, 0)`: Conditional replacement.
+  ```python
+  arr = np.array([1, 2, 3, 4])
+  print(np.where(arr > 2, arr, 0))  # Output: [0 0 3 4]
+  ```
+- `np.clip(arr, 2, 4)`: Limit values to a range.
+- `np.cumsum(arr)`: Cumulative sum.
+- `np.unique(arr)`: Unique elements.
+
+### Statistical Functions
+- `np.median(arr)`: Median of array.
+- `np.percentile(arr, 50)`: 50th percentile.
+- `np.corrcoef(arr1, arr2)`: Correlation coefficient.
+
+### Linear Algebra
+- `np.linalg.norm(arr)`: Compute norm.
+- `np.linalg.eig(mat)`: Eigenvalues and eigenvectors.
+- `np.linalg.svd(mat)`: Singular value decomposition.
+
+---
+
+## 8. NumPy Tricks and Tips
+
+### 1. **Vectorize Operations**
+Avoid loops for better performance:
+```python
+# Bad
+result = []
+for i in range(len(arr)):
+    result.append(arr[i] * 2)
+# Good
 result = arr * 2
 ```
 
-### Memory Efficiency
-Use appropriate data types to save memory:
+### 2. **Memory Optimization**
+Use appropriate data types:
 ```python
 arr = np.array([1, 2, 3], dtype=np.int8)  # Use 8-bit integers
+print(arr.nbytes)  # Output: 3 (bytes)
+```
+
+### 3. **Boolean Operations**
+Combine conditions efficiently:
+```python
+mask = (arr > 1) & (arr < 3)
+print(arr[mask])  # Output: [2]
+```
+
+### 4. **Efficient Indexing**
+Use `np.take` for advanced indexing:
+```python
+indices = [0, 2]
+print(np.take(arr, indices))  # Output: [1 3]
+```
+
+### 5. **Random Sampling**
+Sample without replacement:
+```python
+sample = np.random.choice(arr, size=2, replace=False)
+```
+
+### 6. **Array Comparison**
+Check equality or closeness:
+```python
+arr1 = np.array([1, 2])
+arr2 = np.array([1, 2.00000001])
+print(np.allclose(arr1, arr2, atol=1e-8))  # Output: True
+```
+
+### 7. **Conditional Assignment**
+Use `np.select` for complex conditions:
+```python
+conditions = [arr < 2, arr >= 2]
+choices = [0, 1]
+result = np.select(conditions, choices, default=-1)
+print(result)  # Output: [0 1 1]
+```
+
+### 8. **Efficient Matrix Operations**
+Use `@` for matrix multiplication:
+```python
+result = mat1 @ mat2  # Same as np.matmul
+```
+
+### 9. **Debugging Shapes**
+Print shapes during development:
+```python
+def debug_shape(arr):
+    print(f"Shape: {arr.shape}")
+    return arr
+debug_shape(arr_2d)
+```
+
+### 10. **Handle Large Arrays**
+Use memory-mapped arrays for large datasets:
+```python
+mmap_arr = np.memmap('large_array.dat', dtype='float32', mode='w+', shape=(1000, 1000))
 ```
 
 ---
 
-## 9. Practical Workflows
-
-### Data Preprocessing
-
-Normalize data (e.g., scale to [0, 1]):
+## 9. NumPy with Visualization
+Integrate with Matplotlib for plotting:
 ```python
-data = np.array([10, 20, 30, 40, 50])
-normalized = (data - np.min(data)) / (np.max(data) - np.min(data))
-print(normalized)  # Output: [0. 0.25 0.5 0.75 1.]integers
-```
-
-### Handling Missing Data
-
-Replace NaN values:
-```python
-arr = np.array([1, np.nan, 3, 4])
-arr[np.isnan(arr)] = 0
-print(arr)  # Output: [1. 0. 3. 4.]
-```
-
-### Working with Large Datasets
-
-Use `np.memmap` for memory-efficient handling of large arrays:
-```python
-arr = np.memmap('large_array.dat', dtype='float32', mode='w+', shape=(10000, 10000))
-arr[:] = np.random.rand(10000, 10000)  # Fill with random data
+import matplotlib.pyplot as plt
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+plt.plot(x, y)
+plt.title("Sine Wave")
+plt.show()
 ```
 
 ---
 
 ## 10. Best Practices
 
-- **Use Descriptive Variable Names**: E.g., `matrix_a` instead of `a`.
-- **Check Array Shapes**: Ensure compatibility before operations.
-- **Leverage Broadcasting**: Avoid unnecessary loops.
-- **Document Code**: Add comments for complex operations.
-- **Test Edge Cases**: Handle empty arrays or invalid inputs.
+- **Use Vectorized Operations**: Avoid loops for efficiency.
+- **Specify Data Types**: Use `dtype` to optimize memory (e.g., `int8`, `float32`).
+- **Avoid Copies**: Use views (`arr[:2]`) instead of copies where possible.
+- **Check Shapes**: Ensure array shapes align for operations.
+- **Leverage Documentation**: Refer to [NumPy Docs](https://numpy.org/doc/stable/) for details.
 
 ---
 
-## 11. Troubleshooting & Common Issues
+## 11. Troubleshooting & Tips
 
-### Shape Mismatch
-Ensure arrays have compatible shapes for operations:
-```python
-a = np.array([[1, 2], [3, 4]])
-b = np.array([1, 2])
-# This will work due to broadcasting
-print(a + b)
-```
+### Common Issues
+- **Shape Mismatch**:
+  ```python
+  arr1 = np.array([1, 2])
+  arr2 = np.array([3, 4, 5])  # Incompatible shapes
+  # Fix: Reshape or broadcast
+  arr2 = arr2[:2]
+  print(arr1 + arr2)
+  ```
+- **Memory Errors**: Use `np.memmap` or chunk processing for large arrays.
+- **Data Type Issues**: Check `dtype` with `arr.dtype`.
 
-### Data Type Issues
-Check `dtype` to avoid precision errors:
-```python
-arr = np.array([1.5, 2.7], dtype=np.int32)  # Loses decimal precision
-print(arr)  # Output: [1 2]
-```
----
-
-## 12. NumPy Useful Functions (With Use-Cases)
-
-### Array Creation & Initialization
-
-| Function                             | Use                                  |
-| ------------------------------------ | ------------------------------------ |
-| `np.array()`                         | Convert list or tuple to NumPy array |
-| `np.zeros(shape)`                    | Create array filled with 0s          |
-| `np.ones(shape)`                     | Create array filled with 1s          |
-| `np.full(shape, value)`              | Array with a constant value          |
-| `np.eye(n)`                          | Identity matrix                      |
-| `np.arange(start, stop, step)`       | Range of numbers                     |
-| `np.linspace(start, stop, num)`      | Evenly spaced values                 |
-| `np.random.rand()`                   | Random floats (0–1)                  |
-| `np.random.randint(low, high, size)` | Random integers                      |
-| `np.empty(shape)`                    | Create an uninitialized array        |
-
-### Array Info & Shape Manipulation
-
-| Function                         | Use                         |
-| -------------------------------- | --------------------------- |
-| `arr.shape`                      | Get shape of array          |
-| `arr.reshape(new_shape)`         | Change shape                |
-| `arr.flatten()`                  | Flatten to 1D               |
-| `arr.ravel()`                    | Flatten (faster view)       |
-| `arr.transpose()` or `arr.T`     | Transpose dimensions        |
-| `np.expand_dims(arr, axis)`      | Add a dimension             |
-| `np.squeeze(arr)`                | Remove single dimensions    |
-| `np.resize(arr, new_shape)`      | Resize (can repeat values)  |
-| `np.concatenate([a, b], axis=0)` | Join arrays                 |
-| `np.stack([a, b], axis=0)`       | Stack arrays along new axis |
-
-### Math, Logic, Image-Friendly Ops
-
-| Function                            | Use                                      |
-| ----------------------------------- | ---------------------------------------- |
-| `np.clip(arr, min, max)`            | Limit values (good for brightness edits) |
-| `np.where(condition, x, y)`         | Conditional selection                    |
-| `np.mean(arr)`                      | Average value                            |
-| `np.sum(arr)`                       | Total sum                                |
-| `np.min(arr)` / `np.max(arr)`       | Min / max values                         |
-| `np.std(arr)`                       | Standard deviation                       |
-| `np.argmin(arr)` / `np.argmax(arr)` | Index of min/max                         |
-| `np.unique(arr)`                    | Unique values (e.g., in masks)           |
-| `np.isnan(arr)` / `np.isinf(arr)`   | Check for NaNs / Infs                    |
-| `np.dot(a, b)`                      | Dot product (used in CNNs, ML)           |
-
-### Bonus Tips for CV Projects
-
-| Use Case            | NumPy Tricks                            |
-| ------------------- | --------------------------------------- |
-| **Grayscale image** | `img_gray = np.mean(img, axis=2)`       |
-| **Invert image**    | `img_inv = 255 - img`                   |
-| **Thresholding**    | `img_bin = np.where(img > 128, 255, 0)` |
-| **ROI cropping**    | `roi = img[100:200, 150:250]`           |
-| **Image masking**   | `img[mask == 0] = 0`                    |
+### Performance Tips
+- **Use `np.where` for Conditionals**:
+  ```python
+  result = np.where(arr > 2, arr, 0)
+  ```
+- **Avoid Unnecessary Copies**:
+  ```python
+  view = arr[:2]  # View, not copy
+  copy = arr.copy()  # Explicit copy
+  ```
+- **Parallelize with NumPy**: Use `numexpr` or `joblib` for large computations.
 
 ---
 
-## 13. Resources & Further Learning
+## 12. Resources & Further Learning
 
 - **Official Documentation**: [NumPy Docs](https://numpy.org/doc/stable/)
-- **Tutorials**: [Scientific Python Lectures](https://scipy-lectures.org/)
+- **Tutorials**: [NumPy Quickstart](https://numpy.org/doc/stable/user/quickstart.html), [Kaggle NumPy](https://www.kaggle.com/learn/python)
 - **Books**: "Python for Data Analysis" by Wes McKinney
+- **Community**: [Stack Overflow](https://stackoverflow.com/questions/tagged/numpy), [NumPy GitHub](https://github.com/numpy/numpy)
 
 ---

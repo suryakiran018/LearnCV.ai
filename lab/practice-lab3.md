@@ -1,154 +1,73 @@
-# 🔬 **Practice Lab - 3: Real-time Data Processing & Visualization**
+# Practice Lab - 3: Real-time Data Processing, Analysis & Visualization
 
-## 🎯 **Objective**
+## 🎯 **Objective:**
 
-To practice **real-world data handling** using
-
-* `scipy` for numerical analysis,
-* `matplotlib` for visualization,
-* `flask` for building a small web interface,
-* and **`web scraping/datasets`** for real-time data sources.
+To design and implement a **real-time data pipeline** using Python for collecting, preprocessing, analyzing, and visualizing data. Students will work with **SQL, Pandas, NumPy, SciPy, Scikit-learn, Matplotlib, Seaborn, Tkinter/Streamlit** to build an **end-to-end real-time dashboard**.
 
 ---
 
-## 🛠️ **Real-Time Lab Tasks**
+## 💻 Real-time Data Problems
 
-### Task 1: Data Collection
+### Easy Problems
 
-* **Option A: Web Scraping**
+* Build a **Live Weather Dashboard** (fetch weather API → preprocess → plot live charts).
+* Create a **Real-time Stock Price Tracker** (simulate/stream stock data → moving averages → visualize).
+* Develop a **Sensor Monitoring System** (IoT-like temperature/humidity data → process → display).
 
-  * Scrape live weather data (e.g., from [weather.com](https://weather.com) or [IMD](https://mausam.imd.gov.in/)).
-  * Scrape stock prices (e.g., from [Yahoo Finance](https://finance.yahoo.com/)).
-    👉 Use `requests + BeautifulSoup4`.
+### Medium Problems
 
-* **Option B: Use Datasets**
+* Implement a **Real-time Traffic Flow Analyzer** (simulate vehicle counts → statistical analysis → live visualization).
+* Design a **Covid-19 Live Data Tracker** (fetch from API → clean with Pandas → predict trends using Scikit-learn → visualize).
+* Build a **Real-time Chat Sentiment Analyzer** (simulate chat stream → NLP preprocessing → sentiment classification → live graph).
 
-  * Kaggle dataset links:
+### Hard Problems
 
-    * [COVID-19 Dataset](https://www.kaggle.com/datasets/imdevskp/corona-virus-report)
-    * [World Happiness Report](https://www.kaggle.com/datasets/unsdsn/world-happiness)
-    * [IPL Data](https://www.kaggle.com/datasets/manasgarg/ipl)
-
----
-
-### Task 2: Data Processing with `scipy`
-
-* Perform **basic statistics**: mean, median, standard deviation.
-* Use `scipy.stats` for hypothesis testing (e.g., compare two cities’ weather temperatures).
-* Use `scipy.optimize` for curve fitting (e.g., trendline for stock price data).
+* Create a **Fraud Detection System for Transactions** (simulate transaction stream → anomaly detection model → dashboard alerts).
+* Design a **Real-time Recommendation System** (simulate e-commerce clicks → preprocess with Pandas → recommend products → UI with Streamlit).
+* Build a **Smart City Dashboard** (simulate multiple streams: weather, traffic, pollution → aggregate → visualize in a single dashboard).
 
 ---
 
-### Task 3: Visualization with `matplotlib`
+## 🛠️ **Lab Instructions for Students**
 
-* Plot **time-series graphs** (temperature/stock prices).
-* Create **bar charts** (team wins in IPL).
-* Create **heatmaps** for correlations.
+1. Select **one real-time data problem** from the list above or propose a new one.
+2. Collect or simulate a **streaming dataset** (API, CSV updates, or random generator).
+3. Perform **data preparation** using **SQL** (if database involved) or Pandas.
+4. Apply **data preprocessing** (cleaning, feature extraction, normalization).
+5. Carry out **real-time analysis** (statistics with SciPy / predictive modeling with Scikit-learn).
+6. Build **visualizations** using **Matplotlib/Seaborn**.
+7. Create an **interactive dashboard** using **Tkinter (desktop GUI)** or **Streamlit (web app)**.
+8. Submit the lab manual with UML diagram (data pipeline + class structure) and Python implementation.
 
----
-
-### Task 4: Build a Mini Web App with `flask`
-
-* Create a simple **dashboard**:
-
-  * Upload a CSV dataset (or fetch scraped data).
-  * Show statistical results (`scipy`).
-  * Display interactive plots (`matplotlib` → convert plots into PNG/HTML).
-
----
-## 💻 **Example Flow**
-
-1. Scrape **today’s Hyderabad weather data**.
-2. Process data using **scipy** (`mean`, `variance`, trend analysis).
-3. Visualize with **matplotlib** (temperature variation).
-4. Display results on a **flask app dashboard**.
-
----
----
-
-# 🛒 **Lab Project 3.2: E-commerce Price History Tracker**
-
-## 🎯 **Objective**
-
-* Scrape product prices (Amazon, Flipkart, etc.).
-* Store historical prices for analysis.
-* Use `scipy` for statistics & trend analysis.
-* Visualize with `matplotlib`.
-* Display insights with `flask` web dashboard.
-
----
-
-## 🛠️ **Steps**
-
-### Step 1: Web Scraping
-
-* Scrape product **name, price, rating**.
-* Use `requests + BeautifulSoup` (or `playwright`/`selenium` for dynamic pages).
-* Example: Track a laptop or mobile price daily.
-* Store data in **CSV / SQLite DB**.
-
----
-
-### Step 2: Data Processing with `scipy`
-
-* Compute **mean, median, std deviation** of prices.
-* Detect **outliers** (fake discounts).
-* Use `scipy.signal` for **trend detection**.
-
----
-
-### Step 3: Visualization with `matplotlib`
-
-* Line chart: price vs time.
-* Bar chart: comparison of multiple sellers.
-* Scatter plot: price vs rating.
-
----
-
-### Step 4: Flask Dashboard
-
-* Upload product URL → Start tracking.
-* Show **price history chart**.
-* Display alerts (e.g., “Lowest price in last 30 days!”).
-* Optionally: Send **email/SMS alerts** when price drops.
-
----
 ---
 
 ## ✅ **Rubric for Evaluation**
 
-| Criteria                               | Marks  |
-| -------------------------------------- | ------ |
-| Data Collection (Scraping/API/Dataset) | 5      |
-| Data Processing (scipy use)            | 10     |
-| Visualization (matplotlib)             | 10     |
-| Flask Integration (Mini App)           | 5      |
-| Presentation & Demo                    | 5      |
-| **Total**                              | **35** |
+| Criteria                          | Marks  |
+| --------------------------------- | ------ |
+| Problem Understanding             | 5      |
+| Data Pipeline Design (UML + Flow) | 10     |
+| Code Structure (OOP & Data Tools) | 10     |
+| Real-time Demo / Dashboard Output | 5      |
+| Lab Manual Presentation (Oral)    | 5      |
+| **Total**                         | **35** |
 
 ---
 
 ## 🙏 **Credits / Acknowledgements**
 
-We acknowledge the use of open-source libraries, datasets, and references that make this **E-commerce Price History Tracker** lab possible:
+We acknowledge the use of open-source educational tools and libraries for Python-based data science and visualization:
 
-* **Python Libraries**
+* [SQL](../tools/SQL.md)
+* [Pandas](../tools/Pandas.md), [NumPy](../tools/numpy.md)
+* [SciPy](../tools/scipy.md), [Scikit-learn](../tools/scikit-learn.md)
+* [Matplotlib](../tools/matplotlib.md), [Seaborn](../tools/seaborn.md)
+* [Tkinter](../tools/Tkinter.md), [Streamlit](../tools/streamlit.md)
 
-  * [`requests`](https://docs.python-requests.org/en/latest/) & [`BeautifulSoup4`](https://www.crummy.com/software/BeautifulSoup/) for web scraping.
-  * [`scipy`](https://scipy.org/) for statistical analysis and trend detection.
-  * [`matplotlib`](https://matplotlib.org/) for visualizations.
-  * [`flask`](https://flask.palletsprojects.com/) for building the web dashboard.
-  * Live scraping examples (educational use only, respecting website terms & conditions).
-
-* **Community References**
-
-  * [Kaggle Community](https://www.kaggle.com/) for curated datasets.
-  * [Real Python Tutorials](https://realpython.com/) for practical Flask and web scraping guides.
+These tools form the **foundation of real-time data-driven applications** and are widely used in both academia and industry.
 
 ---
 
-> This lab is intended solely for **academic and practice purposes**.
-
-> Full credit goes to the original authors and maintainers for their contribution to the open-source and data science education community.
+> This lab is intended for **academic and practice purposes**. Students will gain hands-on experience in real-time data engineering, machine learning, and interactive visualization.
 
 ---
