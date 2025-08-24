@@ -144,7 +144,8 @@ def form():
 
 Template (`templates/form.html`):
 
-```markdown
+{% raw %}
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -163,6 +164,7 @@ Template (`templates/form.html`):
 </body>
 </html>
 ```
+{% endraw %}
 
 ---
 
@@ -208,7 +210,7 @@ def users():
 ```
 
 Template (`templates/users.html`):
-```markdown
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -295,7 +297,7 @@ def page_not_found(e):
 ```
 
 Template (`templates/404.html`):
-```markdown
+```html
 <!DOCTYPE html>
 <html>
 <body>
