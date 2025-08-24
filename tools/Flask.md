@@ -143,7 +143,8 @@ def form():
 ```
 
 Template (`templates/form.html`):
-```html
+
+```markdown
 <!DOCTYPE html>
 <html>
 <body>
@@ -207,7 +208,7 @@ def users():
 ```
 
 Template (`templates/users.html`):
-```html
+```markdown
 <!DOCTYPE html>
 <html>
 <body>
@@ -294,7 +295,7 @@ def page_not_found(e):
 ```
 
 Template (`templates/404.html`):
-```html
+```markdown
 <!DOCTYPE html>
 <html>
 <body>
