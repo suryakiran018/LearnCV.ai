@@ -289,10 +289,11 @@ Integrate CSS with Flask for dynamic web apps:
    ```
 2. Link in a Flask template (`templates/index.html`):
 
-```markdown
+{% raw %}
+   ```html
    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
    ```
-```
+{% endraw %}
 
 3. Flask app:
    ```python
