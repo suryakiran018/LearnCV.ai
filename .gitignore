@@ -1,5 +1,7 @@
 .DS_Store
+lectures/pdfs/.
 lectures/notebooks/.
 lectures/templates/Mathematics_for_AI.html
 Assignements/assignment_format.md
-lectures/pdfs/.
+lectures/pdfs/Module-1.pdf
+lectures/notebooks/Module_1_Image_Processing_Foundations.ipynb
