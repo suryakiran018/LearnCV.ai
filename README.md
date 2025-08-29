@@ -83,7 +83,6 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 | Aug 20, 2025 | Module 0  | Web Development Basics| [Web-Development-Basics.md](tools/Web-Development-Basics.md)  | [HTML](tools/HTML.md), [CSS](tools/CSS.md), [JavaScript](tools/JavaScript.md), [Flask](tools/Flask.md) |
 | Aug 22, 2025 | Module 1  | Image Acquisition, Image Representation | [Image Processing Foundation](https://colab.research.google.com/drive/1bOfVyQuf3ayictaser_zVKiObb8MEwbD?usp=sharing)  | Digital vs Analog, Cameras, CMOS vs CCD, Pixels, Color Spaces  |
 | Aug 25, 2025 | Module 0  | OpenCV Basics | [OpenCV.md](lectures/templates/OpenCV.md), [OpenCV.ipynb](lectures/notebooks/OpenCV.ipynb), [OpenCV.colab](https://colab.research.google.com/drive/1JvcrQ6la0fesMziy9uFpLvFwKkfWWtmB?usp=sharing)  | Image processing, Video analysis  |
-| Aug 25, 2025 | Practice Lab 5 | Image & Video Processing with OpenCV | OpenCV, Scikit-image, Pillow, Numpy, Image Processing Foundamentals   | [practice-lab5.md](lab/practice-lab5.md) |
 | ...          | ...       | ...                              | ...               | ...                                        |
 
 ---
@@ -100,6 +99,24 @@ Want to explore real-world applications? Start by selecting a [**Project Idea**]
 | Aug 21, 2025 | Practice Lab 4 | Web Development – Design & Deploy Your Portfolio Online | HTML, CSS, JavaScript, Flask/Streamlit, Responsive Design, Deployment           | [practice-lab4.md](lab/practice-lab4.md) |
 | Aug 25, 2025 | Practice Lab 5 | Image & Video Processing with OpenCV | OpenCV, Scikit-Image, Pillow, Numpy, Image Processing Foundamentals   | [practice-lab5.md](lab/practice-lab5.md) |
 | ...          | ...       | ...                              | ...               | ...                                        |
+
+---
+
+Got it 👍 — you’d like your **Assignments Index** to look consistent with the **Lab Index** you’ve already written.
+Here’s a clean, professional **Assignments Index** template you can directly use and extend:
+
+---
+
+## 📑 **Assignments Index**
+
+***"Build, apply, and showcase your learning –*** [***step by step.***](https://github.com/purus15987/LearnCV.ai/issues)
+
+| 📅 **Deadline** | 📝 **Assignment No.** | 📌 **Assignment Title**                                        | 📚 **Topics Covered**                                              | 🔗 **Link**                                    |
+| --------------- | --------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------- |
+| Aug 11, 2025    | Assignment 1          | Mathematical Foundations for Computer Vision   | Linear Algebra, Probability & Statistics, Geometry, Optimization Techniques, Calculus, Discrete Mathematics, Signal Processing      | [assignment-1.md](ahttps://github.com/purus15987/LearnCV.ai/issues/5) |
+| Aug 28, 2025    | Assignment 2          | OpenCV Lab Notebook Submission                                 | Image operations, Color spaces, Transformations, Video basics      | [assignment-2.md](https://github.com/purus15987/LearnCV.ai/issues/9) |
+| Sep 08, 2025    | Assignment 3          | Image Processing & Analysis Toolkit (GUI – OpenCV + Streamlit) | GUI Design, Color conversions, Filtering, Enhancement, Compression | [assignment-3.md](https://github.com/purus15987/LearnCV.ai/issues/10) |
+| ...             | ...                   | ...                                                            | ...                                                                | ...                                            |
 
 ---
 

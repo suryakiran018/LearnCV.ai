@@ -1,9 +1,9 @@
 ## 📝 Assignment 1 – Mathematical Foundations for Computer Vision
 
-**Module**: Module 0 – Mathematics-for-AI
-**Deadline**: Aug 11, 2025
-**Level**: 🟢 Beginner
-**Points**: 10 points
+**Module**: Module 0 – Mathematics-for-AI \
+**Deadline**: Aug 11, 2025 \
+**Level**: 🟢 Beginner \
+**Points**: 10 points \
 
 ---
 
