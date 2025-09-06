@@ -1,1 +1,0 @@
-const token = "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";

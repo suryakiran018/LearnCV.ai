@@ -74,8 +74,6 @@
         </thead>
         <tbody></tbody>
     </table>
-
-    <script src="../js/config.js"></script>
     <script>
         const owner = "purus15987";
         const repo = "LearnCV.ai";
@@ -167,9 +165,10 @@
             }
 
             try {
-                const headers = token ? { Authorization: `token ${token}` } : {};
+                const headers = {};
                 const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
                 const response = await fetch(apiUrl, { headers });
+                console.log(response)
 
                 if (!response.ok) {
                     if (response.status === 403 && response.headers.get("X-RateLimit-Remaining") === "0") {
