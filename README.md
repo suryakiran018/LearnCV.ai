@@ -111,7 +111,9 @@ Here’s a clean, professional **Assignments Index** template you can directly u
 
 ## 📑 **Assignments Index**
 
-***"Build, apply, and showcase your learning –*** [***step by step.***](https://github.com/purus15987/LearnCV.ai/issues)
+> ***"Build, apply, and showcase your learning –*** [***step by step.***](https://github.com/purus15987/LearnCV.ai/issues)
+
+> [Assignment Submission Tracker](../docs/templates/AssignmentTracker.html)
 
 | 📅 **Deadline** | 📝 **Assignment No.** | 📌 **Assignment Title**                                        | 📚 **Topics Covered**                                              | 🔗 **Link**                                    |
 | --------------- | --------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------- |

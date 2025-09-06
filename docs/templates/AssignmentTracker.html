@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Submission Tracker</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            color: aqua;
+        }
+        h1, h2 {
+            text-align: center;
+            font-weight: bolder;
+        }
+        table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #000848;
+            color: #ffffff;
+        }
+        tr:nth-child(even) {
+            background-color: #1c1c1c;
+        }
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .student-list {
+            justify-content: center;
+        }
+        .assignments {
+            display: flex;
+            text-align: center;
+        }
+        .refresh-button, .github-button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            border-radius: 5%;
+            cursor: pointer;
+        }
+        .refresh-button:hover {
+            background-color: #b2d3ff;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="https://purus15987.github.io/LearnCV.ai/" aria-label="Visit LearnCV.ai homepage">LearnCV.ai</a></h1>
+    <h2>Assignment Submission Tracker</h2>
+    <div class="assignments">
+        <button class="refresh-button" onclick="refreshData()">Refresh Data</button>
+        <a href="https://github.com/purus15987/LearnCV.ai/issues" class="github-button" target="_blank" aria-label="View Assignments on GitHub">View Assignments on GitHub</a>
+        <a href="https://purus15987.github.io/LearnCV.ai/Assignments/assignments.html" class="github-button" target="_blank" aria-label="View Assignments on Website">View Assignments on Website</a>
+    </div>
+    <div id="error" class="error" style="display: none;"></div>
+    <table id="assignmentTable">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Submitted Student Roll Nos</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="../js/config.js"></script>
+    <script>
+        const owner = "purus15987";
+        const repo = "LearnCV.ai";
+        const path = "Assignments";
+        const CACHE_KEY = "assignmentTrackerCache";
+        const CACHE_EXPIRY = 60 * 60 * 1000; // 1 hour in milliseconds
+
+        // Check if cached data is valid
+        function getCachedData() {
+            const cached = localStorage.getItem(CACHE_KEY);
+            if (!cached) return null;
+
+            const { timestamp, data } = JSON.parse(cached);
+            const now = new Date().getTime();
+            if (now - timestamp > CACHE_EXPIRY) {
+                localStorage.removeItem(CACHE_KEY); // Clear expired cache
+                return null;
+            }
+            return data;
+        }
+
+        // Save data to cache with timestamp
+        function setCachedData(data) {
+            const cacheEntry = {
+                timestamp: new Date().getTime(),
+                data
+            };
+            localStorage.setItem(CACHE_KEY, JSON.stringify(cacheEntry));
+        }
+
+        // Render table with data
+        function renderTable(tasksData) {
+            const tableBody = document.querySelector("#assignmentTable tbody");
+            const errorDiv = document.querySelector("#error");
+            tableBody.innerHTML = "";
+            errorDiv.style.display = "none";
+
+            if (!tasksData || tasksData.length === 0) {
+                errorDiv.textContent = "No tasks or submissions found.";
+                errorDiv.style.display = "block";
+                return;
+            }
+
+            tasksData.forEach(({ taskName, studentRollNos }) => {
+                const tr = document.createElement("tr");
+
+                const taskTd = document.createElement("td");
+                const taskLink = document.createElement("a");
+                const mdFileName = taskName.toLowerCase().replace("-", "");
+                taskLink.href = `https://github.com/${owner}/${repo}/blob/main/${path}/${taskName}/${mdFileName}.md`;
+                taskLink.textContent = taskName;
+                taskLink.target = "_blank"; // Open in new tab
+                taskLink.setAttribute("aria-label", `View details for ${taskName}`);
+                taskTd.appendChild(taskLink);
+
+                const studentsTd = document.createElement("td");
+                const studentList = document.createElement("div");
+                studentList.className = "student-list";
+
+                if (studentRollNos.length === 0) {
+                    studentList.textContent = "No submissions";
+                } else {
+                    studentRollNos.forEach(rollNo => {
+                        const span = document.createElement("span");
+                        span.className = "student-roll";
+                        span.textContent = rollNo;
+                        studentList.appendChild(span);
+                        studentList.appendChild(document.createElement("br"));
+                    });
+                }
+
+                studentsTd.appendChild(studentList);
+                tr.appendChild(taskTd);
+                tr.appendChild(studentsTd);
+                tableBody.appendChild(tr);
+            });
+        }
+
+        async function fetchAssignments(useCache = true) {
+            const errorDiv = document.querySelector("#error");
+
+            // Check cache first if useCache is true
+            if (useCache) {
+                const cachedData = getCachedData();
+                if (cachedData) {
+                    renderTable(cachedData);
+                    return;
+                }
+            }
+
+            try {
+                const headers = token ? { Authorization: `token ${token}` } : {};
+                const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+                const response = await fetch(apiUrl, { headers });
+
+                if (!response.ok) {
+                    if (response.status === 403 && response.headers.get("X-RateLimit-Remaining") === "0") {
+                        throw new Error("GitHub API rate limit exceeded. Please try again later.");
+                    }
+                    throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+                }
+
+                const tasks = await response.json();
+
+                if (!Array.isArray(tasks)) {
+                    throw new Error("Invalid repository structure or no assignments found.");
+                }
+
+                const taskPromises = tasks
+                    .filter(task => task.type === "dir")
+                    .map(async task => {
+                        const taskResponse = await fetch(task.url, { headers });
+                        if (!taskResponse.ok) {
+                            if (taskResponse.status === 403 && taskResponse.headers.get("X-RateLimit-Remaining") === "0") {
+                                throw new Error("GitHub API rate limit exceeded for task fetch.");
+                            }
+                            throw new Error(`Failed to fetch students for ${task.name}`);
+                        }
+                        const students = await taskResponse.json();
+                        const studentRollNos = students
+                            .filter(student => student.type === "dir")
+                            .map(student => student.name);
+
+                        return { taskName: task.name, studentRollNos };
+                    });
+
+                const results = await Promise.allSettled(taskPromises);
+                const tasksData = results
+                    .filter(result => result.status === "fulfilled")
+                    .map(result => result.value);
+
+                // Save to cache
+                setCachedData(tasksData);
+
+                // Render table
+                renderTable(tasksData);
+
+                if (tasksData.length === 0) {
+                    errorDiv.textContent = "No tasks or submissions found.";
+                    errorDiv.style.display = "block";
+                }
+            } catch (error) {
+                // Fallback to cached data if available
+                const cachedData = getCachedData();
+                if (cachedData) {
+                    renderTable(cachedData);
+                    errorDiv.textContent = `Failed to fetch new data: ${error.message}. Displaying cached data.`;
+                    errorDiv.style.display = "block";
+                } else {
+                    errorDiv.textContent = `Error: ${error.message}`;
+                    errorDiv.style.display = "block";
+                }
+                console.error("Fetch error:", error);
+            }
+        }
+
+        // Manual refresh function
+        function refreshData() {
+            localStorage.removeItem(CACHE_KEY); // Clear cache
+            fetchAssignments(false); // Fetch fresh data
+        }
+
+        // Initial fetch
+        fetchAssignments();
+    </script>
+</body>
+</html>
