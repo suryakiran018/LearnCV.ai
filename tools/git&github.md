@@ -377,6 +377,6 @@ Happy coding! 🚀
 **Start your version-controlled journey today.**
 If you found this helpful, ⭐ the repo and share!
 
-Next Topic: - [Mathematics for AI](../lectures/Mathematics_for_AI.html)
+Next Topic: - [Mathematics for AI](../lectures/templates/Mathematics_for_AI.html)
 
 Need More Help: [Ask Your Questions](https://github.com/purus15987/LearnCV.ai/discussions/categories/q-a)
